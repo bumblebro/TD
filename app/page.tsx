@@ -164,6 +164,38 @@ export default function Home() {
     };
   }, []);
 
+  const handlePaste = async () => {
+    try {
+      // Try using the modern Clipboard API first
+      if (navigator.clipboard && navigator.clipboard.readText) {
+        const text = await navigator.clipboard.readText();
+        setUrl(text);
+        return;
+      }
+
+      // Fallback for older browsers and mobile devices
+      const textarea = document.createElement("textarea");
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.focus();
+
+      // Try to paste
+      const success = document.execCommand("paste");
+      if (success) {
+        setUrl(textarea.value);
+      } else {
+        // If execCommand fails, show a message to copy manually
+        setError("Please paste the URL manually");
+      }
+
+      document.body.removeChild(textarea);
+    } catch (err) {
+      // If all methods fail, show a message to copy manually
+      setError("Please paste the URL manually");
+    }
+  };
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError("");
@@ -220,14 +252,7 @@ export default function Home() {
                   />
                   <button
                     type="button"
-                    onClick={async () => {
-                      try {
-                        const text = await navigator.clipboard.readText();
-                        setUrl(text);
-                      } catch (err) {
-                        setError("Failed to paste from clipboard");
-                      }
-                    }}
+                    onClick={handlePaste}
                     className="flex items-center justify-center gap-2 px-3 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border border-gray-200 rounded-lg sm:px-4 sm:py-3 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:text-base"
                     disabled={loading}
                   >
