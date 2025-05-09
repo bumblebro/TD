@@ -39,13 +39,31 @@ function findBetween(str: string, start: string, end: string) {
 }
 
 export async function GET(req: NextRequest, res: NextResponse) {
+  // Add CORS headers
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+  };
+
+  // Handle preflight requests
+  if (req.method === "OPTIONS") {
+    return new NextResponse(null, { headers });
+  }
+
   const { searchParams: params } = new URL(req.url);
   if (!params.has("data")) {
-    return NextResponse.json({ error: "Missing data" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Missing data" },
+      { status: 400, headers }
+    );
   }
   const link = params.get("data");
   if (!link) {
-    return NextResponse.json({ error: "Missing data" }, { status: 400 });
+    return NextResponse.json(
+      { error: "Missing data" },
+      { status: 400, headers }
+    );
   }
   const axiosInstance = axios.create({
     headers: {
@@ -132,8 +150,11 @@ export async function GET(req: NextRequest, res: NextResponse) {
       size: getFormattedSize(parseInt(responseData2["list"][0]["size"])),
       sizebytes: parseInt(responseData2["list"][0]["size"]),
     };
-    return NextResponse.json(data, { status: 200 });
+    return NextResponse.json(data, { status: 200, headers });
   } catch (error) {
-    return NextResponse.json({ error: "Unknown Error" }, { status: 400 });
+    console.error("API Error:", error);
+    const errorMessage =
+      error instanceof Error ? error.message : "Unknown Error";
+    return NextResponse.json({ error: errorMessage }, { status: 400, headers });
   }
 }
