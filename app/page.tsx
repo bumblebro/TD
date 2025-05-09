@@ -294,7 +294,7 @@ export default function Home() {
                   </div>
                 )}
                 <div className="mb-4 text-center sm:mb-6">
-                  <h2 className="mb-2 text-xl font-bold text-gray-800 sm:text-2xl">
+                  <h2 className="mb-2 text-sm font-bold text-gray-800 lg:text-xl sm:text-2xl">
                     {data.file_name}
                   </h2>
                   <p className="text-sm text-gray-600 sm:text-base">
