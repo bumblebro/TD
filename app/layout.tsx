@@ -10,24 +10,25 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  // title: "TeraBox Stream - Watch & Download TeraBox Videos Online ",
-  title: "TeraBox Stream - Watch & Download TeraBox Videos Online [no ads] ",
+  title:
+    "TeraBox Link Downloader [2025] | Download TeraBox Videos & Links Online",
   description:
-    "Stream and download videos from TeraBox without any software. Watch TeraBox videos online in HD quality. Fast, free, and secure TeraBox video streaming.",
+    "Download TeraBox links & videos instantly - Free TeraBox link downloader. Open and download any TeraBox link without login. Works with all TeraBox links, videos, and domains. Fast, secure, and no registration required.",
   keywords:
-    "terabox stream, terabox video, terabox download, watch terabox online, terabox streaming, terabox video player, terabox video downloader, terabox stream online, terabox video stream, terabox stream app",
+    "terabox link, terabox link download, terabox link downloader, terabox link open, terabox links, download terabox link, open terabox link, tera box link, terabox download link, terabox link downloader online, terabox video download, terabox video downloader, terabox video, terabox link video download, terabox link video downloader, download terabox link video, download terabox video, tera box video downloader, terabox download video, terabox online video downloader, terabox video downloader online, terabox video link, terrabox video downloader, terabox stream",
   openGraph: {
-    title: "TeraBox Stream - Watch & Download TeraBox Videos Online",
+    title:
+      "TeraBox Link Downloader [2025] | Download TeraBox Videos & Links Online",
     description:
-      "Stream and download videos from TeraBox without any software. Watch TeraBox videos online in HD quality. Fast, free, and secure TeraBox video streaming.",
+      "Download TeraBox links & videos instantly - Free TeraBox link downloader. Open and download any TeraBox link without login. Works with all TeraBox links, videos, and domains. Fast, secure, and no registration required.",
     url: "https://teraboxstream.com",
-    siteName: "TeraBox Stream",
+    siteName: "TeraBox Link Downloader",
     images: [
       {
         url: "https://teraboxstream.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "TeraBox Stream - Watch & Download TeraBox Videos Online",
+        alt: "TeraBox Link Downloader - Download TeraBox Videos & Links Online",
       },
     ],
     locale: "en_US",
@@ -35,9 +36,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TeraBox Stream - Watch & Download TeraBox Videos Online",
+    title:
+      "TeraBox Link Downloader [2025] | Download TeraBox Videos & Links Online",
     description:
-      "Stream and download videos from TeraBox without any software. Watch TeraBox videos online in HD quality. Fast, free, and secure TeraBox video streaming.",
+      "Download TeraBox links & videos instantly - Free TeraBox link downloader. Open and download any TeraBox link without login. Works with all TeraBox links and videos.",
     images: ["https://teraboxstream.com/og-image.jpg"],
   },
   robots: {

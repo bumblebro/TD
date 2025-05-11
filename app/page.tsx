@@ -255,7 +255,7 @@ export default function Home() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebApplication",
-            name: "Terabox Downloader",
+            name: "Terabox Stream",
             description:
               "Download files from Terabox without login. Fast, free, and secure Terabox downloader.",
             applicationCategory: "UtilityApplication",

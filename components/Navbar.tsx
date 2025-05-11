@@ -65,6 +65,18 @@ export default function Navbar() {
             >
               Supported URLs
             </Link>
+            <Link
+              href="/blog"
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/resources"
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
+            >
+              Resources
+            </Link>
           </div>
 
           {/* Mobile menu button */}
