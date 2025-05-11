@@ -851,47 +851,91 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-12">
-              <h2 className="mb-6 text-2xl font-bold text-center text-gray-800">
-                Supported Terabox Domains
-              </h2>
-              <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-                {[
-                  "ww.mirrobox.com",
-                  "www.nephobox.com",
-                  "freeterabox.com",
-                  "www.freeterabox.com",
-                  "1024tera.com",
-                  "4funbox.co",
-                  "www.4funbox.com",
-                  "mirrobox.com",
-                  "nephobox.com",
-                  "terabox.app",
-                  "terabox.com",
-                  "www.terabox.ap",
-                  "terabox.fun",
-                  "www.terabox.com",
-                  "www.1024tera.co",
-                  "www.momerybox.com",
-                  "teraboxapp.com",
-                  "momerybox.com",
-                  "tibibox.com",
-                  "www.tibibox.com",
-                  "www.teraboxapp.com",
-                ].map((domain) => (
-                  <div
-                    key={domain}
-                    className="p-3 text-center transition-shadow duration-200 bg-white rounded-lg shadow-sm hover:shadow-md"
+            {/* Blog Section */}
+            <section className="py-16 bg-white">
+              <div className="max-w-6xl px-4 mx-auto">
+                <div className="mb-12 text-center">
+                  <h2 className="mb-4 text-3xl font-bold">Latest Blog Posts</h2>
+                  <p className="max-w-2xl mx-auto text-gray-600">
+                    Discover helpful guides and tutorials about downloading and
+                    streaming TeraBox content.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                  {[
+                    {
+                      title: "How to Download TeraBox Links",
+                      excerpt:
+                        "Complete guide for downloading TeraBox links without login.",
+                      link: "/blog/how-to-download-terabox-links",
+                      category: "Guides",
+                      readTime: "4 min read",
+                    },
+                    {
+                      title: "TeraBox Video Downloader Guide",
+                      excerpt:
+                        "Learn how to download videos from TeraBox without login.",
+                      link: "/blog/terabox-video-downloader-guide",
+                      category: "Tutorial",
+                      readTime: "5 min read",
+                    },
+                    {
+                      title: "How to Stream TeraBox Videos Online",
+                      excerpt:
+                        "Learn how to stream TeraBox videos without downloading.",
+                      link: "/blog/terabox-video-streaming-guide",
+                      category: "Guides",
+                      readTime: "4 min read",
+                    },
+                  ].map((post, index) => (
+                    <Link
+                      key={index}
+                      href={post.link}
+                      className="block transition-shadow bg-white rounded-lg shadow-lg group hover:shadow-xl"
+                    >
+                      <div className="p-6">
+                        <div className="flex items-center gap-4 mb-4">
+                          <span className="px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
+                            {post.category}
+                          </span>
+                          <span className="text-sm text-gray-500">
+                            {post.readTime}
+                          </span>
+                        </div>
+                        <h3 className="mb-3 text-xl font-semibold text-gray-900 transition-colors group-hover:text-blue-600">
+                          {post.title}
+                        </h3>
+                        <p className="mb-4 text-gray-600">{post.excerpt}</p>
+                        <div className="flex items-center font-medium text-blue-600">
+                          Read More
+                          <svg
+                            className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <div className="mt-12 text-center">
+                  <Link
+                    href="/blog"
+                    className="inline-block px-8 py-3 font-semibold text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
                   >
-                    <p className="text-sm text-gray-600 break-all">{domain}</p>
-                  </div>
-                ))}
+                    View All Blog Posts
+                  </Link>
+                </div>
               </div>
-              <p className="mt-4 text-sm text-center text-gray-500">
-                Our downloader supports all official Terabox domains and their
-                variations
-              </p>
-            </div>
+            </section>
 
             <div className="mt-12 text-center">
               <h2 className="mb-4 text-2xl font-bold text-gray-800">
