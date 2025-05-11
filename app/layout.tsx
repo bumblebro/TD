@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingButton from "@/components/FloatingButton";
 import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -125,7 +126,7 @@ export default function RootLayout({
                   name: "Is it safe to use this downloader?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, our downloader is completely safe. We don't store any of your files or data on our servers. All downloads are processed directly from Terabox servers, and we use secure HTTPS connections for all transfers.",
+                    text: "Yes, our downloader is completely safe. We don&apos;t store any of your files or data on our servers. All downloads are processed directly from Terabox servers, and we use secure HTTPS connections for all transfers.",
                   },
                 },
                 {
@@ -133,7 +134,7 @@ export default function RootLayout({
                   name: "Do I need to create an account?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "No, you don't need to create an account or log in to use our downloader. Simply paste the Terabox link and download your files. This makes the process much faster and more convenient.",
+                    text: "No, you don&apos;t need to create an account or log in to use our downloader. Simply paste the Terabox link and download your files. This makes the process much faster and more convenient.",
                   },
                 },
               ],
@@ -231,6 +232,9 @@ export default function RootLayout({
         <Footer />
         <FloatingButton />
       </body>
+      {process.env.NODE_ENV == "production" && (
+        <GoogleAnalytics gaId="G-8XXLSHRBCZ" />
+      )}
     </html>
   );
 }
