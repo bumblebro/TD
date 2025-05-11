@@ -163,7 +163,7 @@ export default function Home() {
       window.removeEventListener("popstate", handleRouteChange);
       window.removeEventListener("resetPage", handleReset);
     };
-  }, []);
+  }, [resetState]);
 
   const handlePaste = async () => {
     try {
@@ -778,8 +778,8 @@ export default function Home() {
                 Ready to Download Your Files?
               </h2>
               <p className="mb-6 text-gray-600">
-                Start downloading your Terabox files now - it's free, fast, and
-                secure!
+                Start downloading your Terabox files now - it&apos;s free, fast,
+                and secure!
               </p>
               <a
                 href="#top"
