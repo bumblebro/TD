@@ -54,6 +54,12 @@ export default function Navbar() {
               About
             </Link>
             <Link
+              href="/blog"
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
+            >
+              Blog
+            </Link>
+            <Link
               href="/faq"
               className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
             >
@@ -64,12 +70,6 @@ export default function Navbar() {
               className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
             >
               Supported URLs
-            </Link>
-            <Link
-              href="/blog"
-              className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Blog
             </Link>
           </div>
 
@@ -136,6 +136,13 @@ export default function Navbar() {
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
             >
               About
+            </Link>
+            <Link
+              href="/blog"
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Blog
             </Link>
             <Link
               href="/faq"
