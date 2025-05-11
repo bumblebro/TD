@@ -67,15 +67,9 @@ export default function Navbar() {
             </Link>
             <Link
               href="/blog"
-              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
+              className="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
             >
               Blog
-            </Link>
-            <Link
-              href="/resources"
-              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
-            >
-              Resources
             </Link>
           </div>
 
