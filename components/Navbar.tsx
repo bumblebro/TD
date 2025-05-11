@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,13 +35,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Link
-              href="/"
-              onClick={handleHomeClick}
-              className="text-xl sm:text-2xl font-bold text-gray-800 hover:text-gray-600 transition-colors duration-200"
-            >
-              TeraBox Viewer
-            </Link>
+            <Logo onClick={handleHomeClick} />
           </div>
 
           {/* Desktop Navigation */}
@@ -59,10 +54,16 @@ export default function Navbar() {
               About
             </Link>
             <Link
-              href="/contact"
+              href="/faq"
               className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
             >
-              Contact
+              FAQ
+            </Link>
+            <Link
+              href="/supported-urls"
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
+            >
+              Supported URLs
             </Link>
           </div>
 
@@ -131,11 +132,18 @@ export default function Navbar() {
               About
             </Link>
             <Link
-              href="/contact"
+              href="/faq"
               onClick={() => setIsOpen(false)}
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
             >
-              Contact
+              FAQ
+            </Link>
+            <Link
+              href="/supported-urls"
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Supported URLs
             </Link>
           </div>
         </div>

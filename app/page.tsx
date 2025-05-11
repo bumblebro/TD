@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import useSWR from "swr";
 import VideoPlayer, { VideoPlayerRef } from "@/components/VideoPlayer";
 import { useRouter } from "next/navigation";
@@ -132,17 +132,17 @@ export default function Home() {
   }, [error, fetchError, data]);
 
   // Reset function to clear all state
-  const resetState = () => {
+  const resetState = useCallback(() => {
     setUrl("");
     setError("");
     setToken("");
     setLoading(false);
     setLoadingMessage("Processing your request...");
     mutate(undefined, { revalidate: false });
-    document.title = "Download Terabox Files. @RoldexVerse";
+    document.title = "TeraBox Stream - Watch & Download TeraBox Videos Online";
     // Stop video playback if it's playing
     videoPlayerRef.current?.stop();
-  };
+  }, [mutate]);
 
   // Listen for route changes to reset state
   useEffect(() => {
@@ -224,32 +224,32 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Download Terabox Files - Free Terabox Downloader</title>
+        <title>TeraBox Stream - Watch & Download TeraBox Videos Online</title>
         <meta
           name="description"
-          content="Download files from Terabox without login. Fast, free, and secure Terabox downloader supporting 1024terabox, freeterabox, nephobox, and other Terabox domains."
+          content="Stream and download videos from TeraBox without any software. Watch TeraBox videos online in HD quality. Fast, free, and secure TeraBox video streaming."
         />
         <meta
           name="keywords"
-          content="terabox downloader, terabox files, download terabox, terabox video downloader, free terabox downloader, terabox download without login, terabox direct download"
+          content="terabox stream, terabox video, terabox download, watch terabox online, terabox streaming, terabox video player, terabox video downloader, terabox stream online, terabox video stream, terabox stream app"
         />
         <meta
           property="og:title"
-          content="Download Terabox Files - Free Terabox Downloader"
+          content="TeraBox Stream - Watch & Download TeraBox Videos Online"
         />
         <meta
           property="og:description"
-          content="Download files from Terabox without login. Fast, free, and secure Terabox downloader."
+          content="Stream and download videos from TeraBox without any software. Watch TeraBox videos online in HD quality. Fast, free, and secure TeraBox video streaming."
         />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Download Terabox Files - Free Terabox Downloader"
+          content="TeraBox Stream - Watch & Download TeraBox Videos Online"
         />
         <meta
           name="twitter:description"
-          content="Download files from Terabox without login. Fast, free, and secure Terabox downloader."
+          content="Stream and download videos from TeraBox without any software. Watch TeraBox videos online in HD quality. Fast, free, and secure TeraBox video streaming."
         />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -678,24 +678,23 @@ export default function Home() {
             <div className="mt-6">
               <div className="p-6 bg-white rounded-lg shadow-sm">
                 <h3 className="mb-4 text-xl font-semibold text-gray-800">
-                  What is TeraDownloader?
+                  What is TeraBox Stream?
                 </h3>
                 <p className="mb-4 text-gray-600">
-                  TeraDownloader is a specialized tool that simplifies the
-                  process of downloading files from Terabox. While Terabox
-                  typically requires users to log in to access shared content,
-                  our downloader provides a straightforward way to download
-                  files directly from Terabox servers without the need for
-                  registration or login.
+                  TeraBox Stream is a specialized streaming platform that allows
+                  you to watch and download videos from TeraBox directly in your
+                  browser. Unlike traditional methods that require downloading
+                  software or logging in, our service provides instant access to
+                  TeraBox videos through a simple, user-friendly interface.
                 </p>
                 <p className="text-gray-600">
-                  Our service operates with complete transparency and security.
-                  We don&apos;t store any files or user data on our servers.
-                  Instead, we act as a bridge between you and Terabox, making it
-                  easier to access and download your desired content. Whether
-                  you&apos;re downloading videos, documents, or any other file
-                  type, TeraDownloader ensures a smooth and efficient
-                  experience.
+                  Our platform operates with complete transparency and security.
+                  We don&apos;t store any videos or user data on our servers.
+                  Instead, we act as a bridge between you and TeraBox, enabling
+                  seamless video streaming and downloading. Whether you&apos;re
+                  watching movies, TV shows, or any other video content, TeraBox
+                  Stream ensures a smooth and high-quality viewing experience
+                  with support for HD video playback.
                 </p>
               </div>
             </div>

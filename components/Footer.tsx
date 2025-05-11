@@ -7,11 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">About Terabox</h3>
+            <h3 className="text-lg font-semibold">About TeraBox</h3>
             <p className="text-gray-300 text-sm">
-              Terabox is a cloud storage service that offers 1TB of free storage
-              space. Our tool helps you download files from Terabox links easily
-              and securely.
+              TeraBox is a cloud storage service that offers 1TB of free storage
+              space. Our tool helps you stream and download videos from TeraBox
+              links easily and securely.
             </p>
           </div>
 
@@ -55,15 +55,15 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li className="text-gray-300">
                 <a
-                  href="mailto:support@teraboxdownloader.com"
+                  href="mailto:support@teraboxstream.com"
                   className="hover:text-white"
                 >
-                  support@teraboxdownloader.com
+                  support@teraboxstream.com
                 </a>
               </li>
               <li className="text-gray-300">
                 <a
-                  href="https://twitter.com/teraboxdownloader"
+                  href="https://twitter.com/teraboxstream"
                   className="hover:text-white"
                 >
                   Twitter
@@ -77,20 +77,25 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row justify-between items-center">
             <p className="text-sm text-gray-400 text-center sm:text-left">
-              © {new Date().getFullYear()} Terabox Downloader. All rights
-              reserved.
+              © {new Date().getFullYear()} TeraBox Stream. All rights reserved.
             </p>
             <div className="flex flex-col items-center sm:items-end space-y-3 sm:space-y-2">
               <p className="text-sm text-gray-400">
-                Made with ❤️ for Terabox users worldwide
+                Made with ❤️ for TeraBox users worldwide
               </p>
               <div className="flex space-x-6">
-                <a href="#" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/privacy-policy"
+                  className="text-gray-400 hover:text-white"
+                >
                   Privacy Policy
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white">
+                </Link>
+                <Link
+                  href="/terms-of-service"
+                  className="text-gray-400 hover:text-white"
+                >
                   Terms of Service
-                </a>
+                </Link>
               </div>
             </div>
           </div>

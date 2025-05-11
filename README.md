@@ -1,6 +1,8 @@
-<h1 align="center" id="title">Terabox Downloader</h1>
+# TeraBox Stream
 
-![terabox-app](https://socialify.git.ci/r0ld3x/terabox-app/image?description=1&font=KoHo&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark)
+<h1 align="center" id="title">TeraBox Stream</h1>
+
+![terabox-stream](https://socialify.git.ci/r0ld3x/terabox-app/image?description=1&font=KoHo&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Dark)
 
 <h2>Demo</h2>
 <img src="demo.png">
