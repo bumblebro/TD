@@ -284,7 +284,7 @@ export default function Home() {
 
             {/* Link Input Section */}
             <section id="link-input-section" className="py-12 bg-gray-50">
-              <div className="max-w-3xl px-4 mx-auto sm:px-6 lg:px-8">
+              <div className="max-w-3xl mx-auto ">
                 <div className="p-4 bg-gray-50 rounded-xl sm:p-8">
                   <form
                     onSubmit={handleSubmit}

@@ -1,18 +1,18 @@
 "use client";
 
 export default function FloatingButton() {
-  const scrollToInput = () => {
-    const inputSection = document.getElementById("link-input-section");
-    if (inputSection) {
-      inputSection.scrollIntoView({ behavior: "smooth" });
-    }
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
     <button
-      onClick={scrollToInput}
+      onClick={scrollToTop}
       className="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110 z-50"
-      aria-label="Scroll to paste link"
+      aria-label="Scroll to top"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
