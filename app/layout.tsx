@@ -10,7 +10,8 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TeraBox Stream - Watch & Download TeraBox Videos Online",
+  // title: "TeraBox Stream - Watch & Download TeraBox Videos Online ",
+  title: "TeraBox Stream - Watch & Download TeraBox Videos Online [no ads] ",
   description:
     "Stream and download videos from TeraBox without any software. Watch TeraBox videos online in HD quality. Fast, free, and secure TeraBox video streaming.",
   keywords:
