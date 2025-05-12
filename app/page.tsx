@@ -1,34 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState, useRef, useCallback } from "react";
-import useSWR from "swr";
-import VideoPlayer, { VideoPlayerRef } from "@/components/VideoPlayer";
+import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
-
-interface ResponseData {
-  file_name: string;
-  link: string;
-  direct_link: string;
-  thumb: string;
-  size: string;
-  sizebytes: number;
-}
-
-const fetchWithToken = async (url: URL | RequestInfo) => {
-  const res = await fetch(url);
-  if (!res.ok) {
-    const errorRes = await res.json();
-    const error = new Error();
-    error.message = errorRes?.error;
-    throw error;
-  }
-
-  return await res.json();
-};
 
 function isValidUrl(url: string | URL) {
   try {
@@ -79,91 +55,22 @@ function checkUrlPatterns(url: string) {
   return false;
 }
 
-function isVideoFile(fileName: string) {
-  const videoExtensions = [
-    ".mp4",
-    ".webm",
-    ".mov",
-    ".avi",
-    ".mkv",
-    ".flv",
-    ".wmv",
-  ];
-  return videoExtensions.some((ext) => fileName.toLowerCase().endsWith(ext));
-}
-
 export default function Home() {
   const [url, setUrl] = useState("");
   const [error, setError] = useState("");
-  const [token, setToken] = useState("");
   const [loading, setLoading] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState(
     "Processing your request..."
   );
   const router = useRouter();
-  const videoPlayerRef = useRef<VideoPlayerRef>(null);
-
-  const {
-    data,
-    error: fetchError,
-    isLoading,
-    mutate,
-  } = useSWR<ResponseData>(
-    token ? [`/api?data=${encodeURIComponent(token)}`] : null,
-    ([url]: [string]) => fetchWithToken(url),
-    {
-      revalidateIfStale: false,
-      revalidateOnFocus: false,
-      revalidateOnReconnect: false,
-    }
-  );
 
   useEffect(() => {
-    if (data) document.title = data.file_name;
-    if (data || fetchError) {
-      setLoading(false);
-      setUrl("");
-    }
-    if (error || fetchError) {
+    if (error) {
       setTimeout(() => {
         setError("");
       }, 5000);
     }
-  }, [error, fetchError, data]);
-
-  // Reset function to clear all state
-  const resetState = useCallback(() => {
-    setUrl("");
-    setError("");
-    setToken("");
-    setLoading(false);
-    setLoadingMessage("Processing your request...");
-    mutate(undefined, { revalidate: false });
-    document.title = "TeraBox Stream - Watch & Download TeraBox Videos Online";
-    // Stop video playback if it's playing
-    videoPlayerRef.current?.stop();
-  }, [mutate]);
-
-  // Listen for route changes to reset state
-  useEffect(() => {
-    const handleRouteChange = () => {
-      if (window.location.pathname === "/") {
-        resetState();
-      }
-    };
-
-    const handleReset = () => {
-      resetState();
-    };
-
-    window.addEventListener("popstate", handleRouteChange);
-    window.addEventListener("resetPage", handleReset);
-
-    return () => {
-      window.removeEventListener("popstate", handleRouteChange);
-      window.removeEventListener("resetPage", handleReset);
-    };
-  }, [resetState]);
+  }, [error]);
 
   const handlePaste = async () => {
     try {
@@ -218,7 +125,7 @@ export default function Home() {
       return;
     }
 
-    setToken(url);
+    router.push(`/watch?token=${encodeURIComponent(url)}`);
   }
 
   return (
@@ -352,53 +259,6 @@ export default function Home() {
                 </div>
               </div>
             </section>
-
-            {data && (
-              <div className="p-4 mt-6 sm:mt-8 bg-gray-50 rounded-xl sm:p-8">
-                <div className="flex flex-col items-center">
-                  {isVideoFile(data.file_name) ? (
-                    <div className="w-full mb-4 sm:mb-6">
-                      <VideoPlayer
-                        ref={videoPlayerRef}
-                        src={data.direct_link}
-                        title={data.file_name}
-                        thumbnail={data.thumb}
-                      />
-                    </div>
-                  ) : (
-                    <div className="mb-4 sm:mb-6">
-                      <Image
-                        className="transition duration-300 ease-in-out transform rounded-lg hover:scale-105"
-                        style={{ objectFit: "contain" }}
-                        loading="lazy"
-                        src={data.thumb}
-                        height={200}
-                        width={200}
-                        alt={data.file_name}
-                      />
-                    </div>
-                  )}
-                  <div className="mb-4 text-center sm:mb-6">
-                    <h2 className="mb-2 text-sm font-bold text-gray-800 lg:text-xl sm:text-2xl">
-                      {data.file_name}
-                    </h2>
-                    <p className="text-sm text-gray-600 sm:text-base">
-                      Size: {data.size}
-                    </p>
-                  </div>
-                  <Link
-                    href={data.direct_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block"
-                  >
-                    <button className="px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-500 rounded-lg sm:py-3 sm:px-6 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:text-base">
-                      Download Now
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            )}
 
             {/* How to Use Section */}
             <div className="mt-12">
