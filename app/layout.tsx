@@ -38,6 +38,21 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "TeraBox Stream",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -77,7 +92,6 @@ export const metadata: Metadata = {
   verification: {
     google: "your-google-site-verification",
     yandex: "your-yandex-verification",
-    bing: "your-bing-verification",
   },
   alternates: {
     canonical: "https://teraboxstream.com",
@@ -95,7 +109,10 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" type="image/png" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="apple-touch-icon" content="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="TeraBox Stream" />
         <Script
           id="structured-data"
           type="application/ld+json"
@@ -267,7 +284,7 @@ export default function RootLayout({
           <SpeedInsights />
         </ThemeProvider>
       </body>
-      {process.env.NODE_ENV == "production" && (
+      {process.env.NODE_ENV === "production" && (
         <GoogleAnalytics gaId="G-8XXLSHRBCZ" />
       )}
     </html>
