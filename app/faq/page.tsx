@@ -1,134 +1,74 @@
-export default function FAQPage() {
+import CTABanner from "@/components/CTABanner";
+
+export default function FAQ() {
   return (
-    <div className="min-h-screen bg-gray-50 py-24">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">
-          Frequently Asked Questions
-        </h1>
+    <div className="min-h-screen mt-20 bg-white">
+      <main className="max-w-4xl px-4 py-8 mx-auto">
+        <div className="mb-8 text-center">
+          <h1 className="mb-4 text-4xl font-bold text-gray-800">
+            Frequently Asked Questions
+          </h1>
+          <p className="max-w-2xl mx-auto text-xl text-gray-600">
+            Find answers to common questions about TeraBox Stream
+          </p>
+        </div>
 
         <div className="space-y-6">
-          {/* What is TeraBox Stream? */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          <div className="p-6 rounded-lg bg-gray-50">
+            <h2 className="mb-4 text-xl font-semibold text-gray-800">
               What is TeraBox Stream?
             </h2>
             <p className="text-gray-600">
-              TeraBox Stream is a specialized streaming platform that allows you
-              to watch and download videos from TeraBox directly in your
-              browser. It provides instant access to TeraBox videos through a
-              simple, user-friendly interface without requiring any software
-              installation.
+              TeraBox Stream is a free online tool that allows you to download
+              files from TeraBox without requiring a login. It provides a simple
+              and secure way to access your TeraBox files.
             </p>
           </div>
 
-          {/* How to use */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">
+          <div className="p-6 rounded-lg bg-gray-50">
+            <h2 className="mb-4 text-xl font-semibold text-gray-800">
               How do I use TeraBox Stream?
             </h2>
-            <p className="text-gray-600 mb-4">
-              Using TeraBox Stream is simple:
+            <p className="text-gray-600">
+              Simply paste your TeraBox link into our downloader, and we&apos;ll
+              process it instantly. No registration or login is required.
             </p>
-            <ol className="list-decimal list-inside space-y-2 text-gray-600">
-              <li>Copy your TeraBox video link</li>
-              <li>Paste it into our streaming interface</li>
-              <li>Click &quot;Watch Video&quot; to start streaming</li>
-              <li>Use the download button if you want to save the video</li>
-            </ol>
           </div>
 
-          {/* Is it free? */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">
-              Is TeraBox Stream free to use?
+          <div className="p-6 rounded-lg bg-gray-50">
+            <h2 className="mb-4 text-xl font-semibold text-gray-800">
+              Is it safe to use?
             </h2>
             <p className="text-gray-600">
-              Yes, TeraBox Stream is completely free to use. There are no hidden
-              charges, premium features, or subscription requirements. We
-              believe in providing a free and accessible service to all users.
+              Yes, TeraBox Stream is completely safe. We don&apos;t store any
+              files on our servers, and all downloads are processed directly
+              from TeraBox.
             </p>
           </div>
 
-          {/* Is it safe? */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">
-              Is it safe to use TeraBox Stream?
+          <div className="p-6 rounded-lg bg-gray-50">
+            <h2 className="mb-4 text-xl font-semibold text-gray-800">
+              Do I need to create an account?
             </h2>
             <p className="text-gray-600">
-              Yes, our service is completely safe. We don&apos;t store any of
-              your files or personal information. All streaming and downloads
-              are processed directly from TeraBox servers, and we use secure
-              HTTPS connections for all transfers.
+              No, you don&apos;t need to create an account or log in to use our
+              service. It&apos;s completely free and accessible to everyone.
             </p>
           </div>
 
-          {/* Supported domains */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">
-              Which TeraBox domains are supported?
-            </h2>
-            <p className="text-gray-600 mb-4">
-              We support all official TeraBox domains, including:
-            </p>
-            <ul className="list-disc list-inside space-y-1 text-gray-600">
-              <li>terabox.com</li>
-              <li>teraboxapp.com</li>
-              <li>4funbox.com</li>
-              <li>mirrobox.com</li>
-              <li>nephobox.com</li>
-              <li>And many more...</li>
-            </ul>
-          </div>
-
-          {/* Video quality */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">
-              What video quality is supported?
+          <div className="p-6 rounded-lg bg-gray-50">
+            <h2 className="mb-4 text-xl font-semibold text-gray-800">
+              What types of files can I download?
             </h2>
             <p className="text-gray-600">
-              TeraBox Stream supports all video qualities available in the
-              original TeraBox link, including HD and 4K content. The streaming
-              quality will automatically adjust based on your internet
-              connection speed.
+              You can download any type of file that&apos;s stored on TeraBox,
+              including videos, documents, images, and more.
             </p>
-          </div>
-
-          {/* Device support */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">
-              Which devices are supported?
-            </h2>
-            <p className="text-gray-600">
-              TeraBox Stream works on all modern devices and browsers. You can
-              use it on:
-            </p>
-            <ul className="list-disc list-inside space-y-1 text-gray-600 mt-2">
-              <li>Desktop computers (Windows, Mac, Linux)</li>
-              <li>Mobile phones (iOS, Android)</li>
-              <li>Tablets</li>
-              <li>Smart TVs with web browsers</li>
-            </ul>
-          </div>
-
-          {/* Troubleshooting */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-3">
-              What if the video doesn&apos;t play?
-            </h2>
-            <p className="text-gray-600 mb-4">
-              If you&apos;re having trouble playing a video, try these
-              solutions:
-            </p>
-            <ul className="list-disc list-inside space-y-1 text-gray-600">
-              <li>Check your internet connection</li>
-              <li>Try refreshing the page</li>
-              <li>Make sure the TeraBox link is valid and accessible</li>
-              <li>Try using a different browser</li>
-              <li>Clear your browser cache</li>
-            </ul>
           </div>
         </div>
-      </div>
+
+        <CTABanner />
+      </main>
     </div>
   );
 }

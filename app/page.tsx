@@ -180,10 +180,10 @@ export default function Home() {
         <main className="flex-grow">
           <div className="max-w-4xl px-4 py-4 mx-auto sm:py-8">
             <div className="mb-6 text-center sm:mb-8">
-              <h1 className="mb-2 text-2xl font-bold text-gray-800 sm:text-4xl sm:mb-4">
+              <h1 className="mb-2 text-2xl font-bold text-gray-900 sm:text-4xl sm:mb-4">
                 Download Terabox Files
               </h1>
-              <p className="max-w-2xl px-2 mx-auto text-base text-gray-600 sm:text-xl">
+              <p className="max-w-2xl px-2 mx-auto text-base text-gray-700 sm:text-xl">
                 Download files from Terabox without login. Works with
                 1024terabox, freeterabox, nephobox, and other Terabox domains.
               </p>
@@ -262,7 +262,7 @@ export default function Home() {
 
             {/* How to Use Section */}
             <div className="mt-12">
-              <h2 className="mb-8 text-2xl font-bold text-center text-gray-800">
+              <h2 className="mb-8 text-2xl font-bold text-center text-gray-900">
                 How to Download Terabox Files
               </h2>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
@@ -328,7 +328,7 @@ export default function Home() {
 
             {/* Features Section */}
             <div className="mt-12">
-              <h2 className="mb-8 text-2xl font-bold text-center text-gray-800">
+              <h2 className="mb-8 text-2xl font-bold text-center text-gray-900">
                 Key Features
               </h2>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -407,12 +407,12 @@ export default function Home() {
 
             {/* Benefits Section */}
             <div className="mt-12">
-              <h2 className="mb-8 text-2xl font-bold text-center text-gray-800">
+              <h2 className="mb-8 text-2xl font-bold text-center text-gray-900">
                 Why Choose Our Downloader
               </h2>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-3 text-lg font-semibold">
+                  <h3 className="mb-3 text-lg font-semibold text-gray-900">
                     User-Friendly Interface
                   </h3>
                   <p className="text-gray-600">
@@ -421,7 +421,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-3 text-lg font-semibold">
+                  <h3 className="mb-3 text-lg font-semibold text-gray-900">
                     No Registration Required
                   </h3>
                   <p className="text-gray-600">
@@ -430,7 +430,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-3 text-lg font-semibold">
+                  <h3 className="mb-3 text-lg font-semibold text-gray-900">
                     Multiple Device Support
                   </h3>
                   <p className="text-gray-600">
@@ -439,7 +439,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-3 text-lg font-semibold">
+                  <h3 className="mb-3 text-lg font-semibold text-gray-900">
                     Regular Updates
                   </h3>
                   <p className="text-gray-600">
@@ -452,7 +452,7 @@ export default function Home() {
 
             {/* Usage Statistics */}
             <div className="mt-12">
-              <h2 className="mb-8 text-2xl font-bold text-center text-gray-800">
+              <h2 className="mb-8 text-2xl font-bold text-center text-gray-900">
                 Our Service in Numbers
               </h2>
               <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -484,7 +484,7 @@ export default function Home() {
             {/* About Terabox Section */}
             <div className="mt-12">
               <div className="p-6 bg-white rounded-lg shadow-sm">
-                <h3 className="mb-4 text-xl font-semibold text-gray-800">
+                <h3 className="mb-4 text-xl font-semibold text-gray-900">
                   What is Terabox?
                 </h3>
                 <p className="mb-4 text-gray-600">
@@ -537,7 +537,7 @@ export default function Home() {
             {/* About TeraDownloader Section */}
             <div className="mt-6">
               <div className="p-6 bg-white rounded-lg shadow-sm">
-                <h3 className="mb-4 text-xl font-semibold text-gray-800">
+                <h3 className="mb-4 text-xl font-semibold text-gray-900">
                   What is TeraBox Stream?
                 </h3>
                 <p className="mb-4 text-gray-600">
@@ -561,12 +561,12 @@ export default function Home() {
 
             {/* FAQ Section */}
             <div className="mt-12">
-              <h2 className="mb-8 text-2xl font-bold text-center text-gray-800">
+              <h2 className="mb-8 text-2xl font-bold text-center text-gray-900">
                 Frequently Asked Questions
               </h2>
               <div className="space-y-4">
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     What is Terabox?
                   </h3>
                   <p className="text-gray-600">
@@ -579,7 +579,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     Is it safe to use this downloader?
                   </h3>
                   <p className="text-gray-600">
@@ -591,7 +591,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     Do I need to create an account?
                   </h3>
                   <p className="text-gray-600">
@@ -603,7 +603,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     What file types are supported?
                   </h3>
                   <p className="text-gray-600">
@@ -615,7 +615,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     Is there a file size limit?
                   </h3>
                   <p className="text-gray-600">
@@ -627,7 +627,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     How fast are the downloads?
                   </h3>
                   <p className="text-gray-600">
@@ -639,7 +639,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     Can I download multiple files?
                   </h3>
                   <p className="text-gray-600">
@@ -650,7 +650,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     Is this service free?
                   </h3>
                   <p className="text-gray-600">
@@ -662,7 +662,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     What if the download fails?
                   </h3>
                   <p className="text-gray-600">
@@ -674,7 +674,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     Do you support all Terabox domains?
                   </h3>
                   <p className="text-gray-600">
@@ -686,7 +686,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     Is my data private?
                   </h3>
                   <p className="text-gray-600">
@@ -698,7 +698,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-6 bg-white rounded-lg shadow-sm">
-                  <h3 className="mb-2 text-lg font-semibold">
+                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
                     Can I use this on mobile devices?
                   </h3>
                   <p className="text-gray-600">
@@ -715,7 +715,9 @@ export default function Home() {
             <section className="py-16 bg-white">
               <div className="max-w-6xl px-4 mx-auto">
                 <div className="mb-12 text-center">
-                  <h2 className="mb-4 text-3xl font-bold">Latest Blog Posts</h2>
+                  <h2 className="mb-4 text-3xl font-bold text-gray-900">
+                    Latest Blog Posts
+                  </h2>
                   <p className="max-w-2xl mx-auto text-gray-600">
                     Discover helpful guides and tutorials about downloading and
                     streaming TeraBox content.
@@ -798,7 +800,7 @@ export default function Home() {
             </section>
 
             <div className="mt-12 text-center">
-              <h2 className="mb-4 text-2xl font-bold text-gray-800">
+              <h2 className="mb-4 text-2xl font-bold text-gray-900">
                 Ready to Download Your Files?
               </h2>
               <p className="mb-6 text-gray-600">
@@ -814,7 +816,7 @@ export default function Home() {
 
               {/* Share Website Buttons */}
               <div className="mt-8">
-                <h3 className="mb-4 text-lg font-semibold text-gray-800">
+                <h3 className="mb-4 text-lg font-semibold text-gray-900">
                   Share This Tool
                 </h3>
                 <div className="flex flex-wrap justify-center gap-2">

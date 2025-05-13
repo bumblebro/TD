@@ -1,44 +1,58 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://teraboxstream.com"; // Replace with your actual domain
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://teraboxstream.com";
+  const currentDate = new Date();
 
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: currentDate,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: currentDate,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: currentDate,
     },
     {
       url: `${baseUrl}/blog/how-to-download-terabox-links`,
-      lastModified: new Date(),
+      lastModified: currentDate,
     },
     {
       url: `${baseUrl}/blog/terabox-link-downloader-tutorial`,
-      lastModified: new Date(),
+      lastModified: currentDate,
     },
     {
       url: `${baseUrl}/blog/terabox-video-downloader-guide`,
-      lastModified: new Date(),
+      lastModified: currentDate,
+    },
+    {
+      url: `${baseUrl}/blog/terabox-video-streaming-guide`,
+      lastModified: currentDate,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
+      lastModified: currentDate,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
+      lastModified: currentDate,
     },
     {
       url: `${baseUrl}/terms-of-service`,
-      lastModified: new Date(),
+      lastModified: currentDate,
+    },
+    {
+      url: `${baseUrl}/supported-urls`,
+      lastModified: currentDate,
+    },
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
     },
   ];
 }

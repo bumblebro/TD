@@ -1,3 +1,5 @@
+import CTABanner from "@/components/CTABanner";
+
 export default function About() {
   return (
     <div className="flex flex-col min-h-screen mt-20 bg-white">
@@ -43,6 +45,8 @@ export default function About() {
               TeraBox login process.
             </p>
           </div>
+
+          <CTABanner />
         </div>
       </main>
     </div>

@@ -1,0 +1,16 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://teraboxstream.com/sitemap.xml
+
+# Disallow API routes
+Disallow: /api/
+
+# Disallow admin routes
+Disallow: /admin/
+
+# Disallow duplicate paths
+Disallow: /privacy/
+Disallow: /terms/ 

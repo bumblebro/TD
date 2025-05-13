@@ -1,133 +1,96 @@
-export default function TermsOfServicePage() {
+import { Metadata } from "next";
+import CTABanner from "@/components/CTABanner";
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description:
+    "Read our Terms of Service to understand the rules and guidelines for using TeraBox Stream. Learn about your rights and responsibilities as a user.",
+  openGraph: {
+    title: "Terms of Service | TeraBox Stream",
+    description:
+      "Read our Terms of Service to understand the rules and guidelines for using TeraBox Stream. Learn about your rights and responsibilities as a user.",
+    url: "https://teraboxstream.com/terms-of-service",
+  },
+  alternates: {
+    canonical: "https://teraboxstream.com/terms-of-service",
+  },
+};
+
+export default function TermsOfService() {
   return (
-    <div className="min-h-screen bg-gray-50 py-24">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">
-          Terms of Service
-        </h1>
-
-        <div className="space-y-8">
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              1. Acceptance of Terms
-            </h2>
-            <p className="text-gray-600">
-              By accessing and using TeraBox Stream, you agree to be bound by
-              these Terms of Service. If you do not agree to these terms, please
-              do not use our service.
+    <div className="flex flex-col min-h-screen mt-20 bg-white">
+      <main className="flex-grow">
+        <div className="max-w-4xl px-4 py-8 mx-auto">
+          <div className="mb-8 text-center">
+            <h1 className="mb-4 text-4xl font-bold text-gray-800">
+              Terms of Service
+            </h1>
+            <p className="max-w-2xl mx-auto text-xl text-gray-600">
+              Please read these terms carefully before using our service.
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              2. Service Description
-            </h2>
-            <p className="text-gray-600">
-              TeraBox Stream is a video streaming service that allows users to
-              watch and download videos from TeraBox links. Our service acts as
-              an intermediary between users and TeraBox content.
-            </p>
+          <div className="p-8 bg-gray-50 rounded-xl">
+            <div className="space-y-6">
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  1. Acceptance of Terms
+                </h2>
+                <p className="text-gray-600">
+                  By accessing and using TeraBox Viewer, you accept and agree to
+                  be bound by the terms and provision of this agreement.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  2. Use of Service
+                </h2>
+                <p className="text-gray-600">
+                  TeraBox Viewer is provided for legitimate file downloading
+                  purposes only. Users are responsible for ensuring they have
+                  the right to download any files they access through our
+                  service.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  3. Service Limitations
+                </h2>
+                <p className="text-gray-600">
+                  We do not guarantee uninterrupted or error-free service. We
+                  reserve the right to modify, suspend, or discontinue the
+                  service at any time.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  4. User Responsibilities
+                </h2>
+                <p className="text-gray-600">
+                  Users are responsible for maintaining the security of their
+                  systems and for any activities that occur under their usage of
+                  the service.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  5. Changes to Terms
+                </h2>
+                <p className="text-gray-600">
+                  We reserve the right to modify these terms at any time. Users
+                  will be notified of any material changes to these terms.
+                </p>
+              </section>
+            </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              3. User Responsibilities
-            </h2>
-            <p className="text-gray-600 mb-4">
-              As a user of TeraBox Stream, you agree to:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>Use the service only for legal purposes</li>
-              <li>Respect copyright and intellectual property rights</li>
-              <li>Not attempt to bypass any security measures</li>
-              <li>Not use the service for any malicious purposes</li>
-              <li>
-                Not share or distribute copyrighted content without permission
-              </li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              4. Intellectual Property
-            </h2>
-            <p className="text-gray-600">
-              TeraBox Stream respects intellectual property rights. Users are
-              responsible for ensuring they have the right to access and use the
-              content they stream or download through our service.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              5. Service Limitations
-            </h2>
-            <p className="text-gray-600 mb-4">Our service:</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>Does not store or host any video content</li>
-              <li>May have occasional service interruptions</li>
-              <li>May not support all video formats or qualities</li>
-              <li>Is provided &quot;as is&quot; without warranties</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              6. Disclaimer of Warranties
-            </h2>
-            <p className="text-gray-600">
-              TeraBox Stream is provided without any warranties, express or
-              implied. We do not guarantee the availability, reliability, or
-              quality of our service.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              7. Limitation of Liability
-            </h2>
-            <p className="text-gray-600">
-              TeraBox Stream shall not be liable for any indirect, incidental,
-              special, consequential, or punitive damages resulting from your
-              use of or inability to use the service.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              8. Changes to Terms
-            </h2>
-            <p className="text-gray-600">
-              We reserve the right to modify these terms at any time. Continued
-              use of the service after changes constitutes acceptance of the
-              modified terms.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              9. Contact Information
-            </h2>
-            <p className="text-gray-600">
-              For questions about these Terms of Service, please contact us at
-              support@teraboxstream.com
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              10. Governing Law
-            </h2>
-            <p className="text-gray-600">
-              These terms shall be governed by and construed in accordance with
-              applicable laws, without regard to its conflict of law provisions.
-            </p>
-            <p className="text-gray-500 mt-4">
-              Last updated: {new Date().toLocaleDateString()}
-            </p>
-          </div>
+          <CTABanner />
         </div>
-      </div>
+      </main>
     </div>
   );
 }

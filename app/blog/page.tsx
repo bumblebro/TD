@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Metadata } from "next";
+import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
   title: "TeraBox Blog - How to Download TeraBox Links & Videos",
@@ -50,77 +51,74 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="bg-blue-600 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">TeraBox Blog</h1>
-          <p className="text-xl text-blue-100">
-            Learn everything about downloading and streaming TeraBox content
+    <div className="min-h-screen mt-20 bg-white">
+      <main className="max-w-4xl px-4 py-8 mx-auto">
+        <div className="mb-8 text-center">
+          <h1 className="mb-4 text-4xl font-bold text-gray-800">
+            TeraBox Blog
+          </h1>
+          <p className="max-w-2xl mx-auto text-xl text-gray-600">
+            Learn how to use TeraBox Stream effectively with our guides and
+            tutorials
           </p>
         </div>
-      </div>
 
-      {/* Blog Posts Grid */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {blogPosts.map((post) => (
-            <article
-              key={post.slug}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Link href={`/blog/${post.slug}`} className="block">
-                <div className="p-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                      {post.category}
-                    </span>
-                    <span className="text-gray-500 text-sm">
-                      {post.readTime}
-                    </span>
-                  </div>
-                  <h2 className="text-2xl font-bold mb-3 text-gray-900 hover:text-blue-600 transition-colors">
-                    {post.title}
-                  </h2>
-                  <p className="text-gray-600 mb-4 line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <time className="text-sm text-gray-500">{post.date}</time>
-                    <span className="text-blue-600 font-medium hover:text-blue-700">
-                      Read more →
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </article>
-          ))}
-        </div>
-
-        {/* Newsletter Section */}
-        <div className="mt-16 bg-white rounded-lg shadow-lg p-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4">Stay Updated</h2>
-            <p className="text-gray-600 mb-6">
-              Get the latest guides and tips about TeraBox downloads delivered
-              to your inbox.
+        <div className="grid gap-8 md:grid-cols-2">
+          <Link
+            href="/blog/how-to-download-terabox-links"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              How to Download TeraBox Links
+            </h2>
+            <p className="text-gray-600">
+              A comprehensive guide on downloading files from TeraBox using our
+              downloader.
             </p>
-            <form className="flex gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button
-                type="submit"
-                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
+          </Link>
+
+          <Link
+            href="/blog/terabox-link-downloader-tutorial"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              TeraBox Link Downloader Tutorial
+            </h2>
+            <p className="text-gray-600">
+              Step-by-step tutorial on using our TeraBox link downloader
+              effectively.
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/terabox-video-downloader-guide"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              TeraBox Video Downloader Guide
+            </h2>
+            <p className="text-gray-600">
+              Learn how to download videos from TeraBox with our easy-to-use
+              downloader.
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/terabox-video-streaming-guide"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              TeraBox Video Streaming Guide
+            </h2>
+            <p className="text-gray-600">
+              Discover how to stream videos from TeraBox without downloading
+              them.
+            </p>
+          </Link>
         </div>
-      </div>
+
+        <CTABanner />
+      </main>
     </div>
   );
 }

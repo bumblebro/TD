@@ -1,128 +1,115 @@
-export default function PrivacyPolicyPage() {
+import { Metadata } from "next";
+import CTABanner from "@/components/CTABanner";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description:
+    "Learn about how TeraBox Stream protects your privacy and handles your data. Our privacy policy explains our data collection and usage practices.",
+  openGraph: {
+    title: "Privacy Policy | TeraBox Stream",
+    description:
+      "Learn about how TeraBox Stream protects your privacy and handles your data. Our privacy policy explains our data collection and usage practices.",
+    url: "https://teraboxstream.com/privacy-policy",
+  },
+  alternates: {
+    canonical: "https://teraboxstream.com/privacy-policy",
+  },
+};
+
+export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-gray-50 py-24">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">
-          Privacy Policy
-        </h1>
-
-        <div className="space-y-8">
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              Introduction
-            </h2>
-            <p className="text-gray-600">
-              At TeraBox Stream, we take your privacy seriously. This Privacy
-              Policy explains how we collect, use, and protect your information
-              when you use our service.
+    <div className="flex flex-col min-h-screen mt-20 bg-white">
+      <main className="flex-grow">
+        <div className="max-w-4xl px-4 py-8 mx-auto">
+          <div className="mb-8 text-center">
+            <h1 className="mb-4 text-4xl font-bold text-gray-800">
+              Privacy Policy
+            </h1>
+            <p className="max-w-2xl mx-auto text-xl text-gray-600">
+              Your privacy is important to us. Learn how we protect your data.
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              Information We Don&apos;t Collect
-            </h2>
-            <p className="text-gray-600 mb-4">
-              We are committed to your privacy and don&apos;t collect or store:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>Personal information</li>
-              <li>Video content</li>
-              <li>User data</li>
-              <li>Browsing history</li>
-              <li>IP addresses (beyond basic analytics)</li>
-            </ul>
+          <div className="p-8 bg-gray-50 rounded-xl">
+            <div className="space-y-6">
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  1. Information We Collect
+                </h2>
+                <p className="text-gray-600">
+                  We collect minimal information necessary to provide our
+                  service. This includes:
+                </p>
+                <ul className="mt-2 space-y-1 text-gray-600 list-disc list-inside">
+                  <li>TeraBox URLs you submit for processing</li>
+                  <li>Basic usage statistics to improve our service</li>
+                  <li>Technical information about your browser and device</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  2. How We Use Your Information
+                </h2>
+                <p className="text-gray-600">
+                  We use the collected information to:
+                </p>
+                <ul className="mt-2 space-y-1 text-gray-600 list-disc list-inside">
+                  <li>Process your download requests</li>
+                  <li>Improve our service and user experience</li>
+                  <li>Monitor and prevent abuse of our service</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  3. Data Storage
+                </h2>
+                <p className="text-gray-600">
+                  We do not store any files or personal data on our servers. All
+                  file processing is done in real-time, and no data is retained
+                  after the download is complete.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  4. Third-Party Services
+                </h2>
+                <p className="text-gray-600">
+                  We use third-party services for analytics and performance
+                  monitoring. These services may collect anonymous usage data to
+                  help us improve our service.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  5. Your Rights
+                </h2>
+                <p className="text-gray-600">You have the right to:</p>
+                <ul className="mt-2 space-y-1 text-gray-600 list-disc list-inside">
+                  <li>Access any personal data we hold about you</li>
+                  <li>Request deletion of your data</li>
+                  <li>Opt-out of analytics tracking</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="mb-4 text-2xl font-bold text-gray-800">
+                  6. Contact Us
+                </h2>
+                <p className="text-gray-600">
+                  If you have any questions about our privacy policy, please
+                  contact us through our contact page.
+                </p>
+              </section>
+            </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              How We Work
-            </h2>
-            <p className="text-gray-600 mb-4">
-              Our service operates as a bridge between you and TeraBox:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>We process video links directly from TeraBox servers</li>
-              <li>No files are stored on our servers</li>
-              <li>All streaming is done through secure HTTPS connections</li>
-              <li>We don&apos;t track or monitor your video content</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              Analytics
-            </h2>
-            <p className="text-gray-600">
-              We use basic analytics to improve our service. This includes:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 mt-4">
-              <li>Page visit statistics</li>
-              <li>Service performance metrics</li>
-              <li>Error tracking</li>
-              <li>Browser compatibility data</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              Cookies
-            </h2>
-            <p className="text-gray-600">
-              We use minimal cookies only for essential service functionality.
-              We don&apos;t use tracking cookies or collect personal data
-              through cookies.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              Third-Party Services
-            </h2>
-            <p className="text-gray-600">
-              Our service interacts with TeraBox servers directly. We don&apos;t
-              share your information with any third-party services or
-              advertisers.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              Your Rights
-            </h2>
-            <p className="text-gray-600 mb-4">You have the right to:</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600">
-              <li>Use our service anonymously</li>
-              <li>Not provide any personal information</li>
-              <li>Clear your browser data at any time</li>
-              <li>Contact us with privacy concerns</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              Contact Us
-            </h2>
-            <p className="text-gray-600">
-              If you have any questions about our Privacy Policy, please contact
-              us at support@teraboxstream.com
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
-              Updates to This Policy
-            </h2>
-            <p className="text-gray-600">
-              We may update this Privacy Policy from time to time. Any changes
-              will be posted on this page with an updated revision date.
-            </p>
-            <p className="text-gray-500 mt-4">
-              Last updated: {new Date().toLocaleDateString()}
-            </p>
-          </div>
+          <CTABanner />
         </div>
-      </div>
+      </main>
     </div>
   );
 }
