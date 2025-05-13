@@ -89,10 +89,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-site-verification",
-    yandex: "your-yandex-verification",
-  },
   alternates: {
     canonical: "https://teraboxstream.com",
   },

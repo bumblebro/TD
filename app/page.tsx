@@ -119,11 +119,11 @@ export default function Home() {
       setLoading(false);
       return;
     }
-    if (!checkUrlPatterns(url)) {
-      setError("Invalid Terabox URL");
-      setLoading(false);
-      return;
-    }
+    // if (!checkUrlPatterns(url)) {
+    //   setError("Invalid Terabox URL");
+    //   setLoading(false);
+    //   return;
+    // }
 
     router.push(`/watch?token=${encodeURIComponent(url)}`);
   }
