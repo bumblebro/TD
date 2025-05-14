@@ -1,4 +1,19 @@
 import CTABanner from "@/components/CTABanner";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FAQ - Frequently Asked Questions About TeraBox Viewer",
+  description:
+    "Find answers to common questions about TeraBox Viewer. Learn how to use our service, supported file types, and troubleshooting tips.",
+  keywords:
+    "TeraBox FAQ, TeraBox questions, TeraBox help, TeraBox troubleshooting, TeraBox guide",
+  openGraph: {
+    title: "FAQ - Frequently Asked Questions About TeraBox Viewer",
+    description:
+      "Find answers to common questions about TeraBox Viewer. Learn how to use our service, supported file types, and troubleshooting tips.",
+    type: "website",
+  },
+};
 
 export default function FAQ() {
   return (

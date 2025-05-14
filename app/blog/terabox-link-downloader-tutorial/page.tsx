@@ -6,7 +6,21 @@ export const metadata: Metadata = {
   description:
     "Master the TeraBox link downloader. Learn how to download TeraBox links quickly and securely. Step-by-step guide for downloading TeraBox files.",
   keywords:
-    "terabox link downloader tutorial, terabox download guide, how to download terabox links, terabox link download guide, terabox download tutorial",
+    "terabox link downloader tutorial, terabox download guide, how to download terabox links, terabox link download guide, terabox download tutorial, terabox link, terabox link download, terabox link downloader, terabox link open, terabox links, download terabox link, open terabox link, tera box link, terabox download link, terabox link downloader online, terabox video download, terabox video downloader, terabox video, terabox link video download, terabox link video downloader, download terabox link video, download terabox video, tera box video downloader, terabox download video, terabox online video downloader, terabox video downloader online, terabox video link, terrabox video downloader",
+  openGraph: {
+    title: "TeraBox Link Downloader Tutorial: Download Files Instantly",
+    description: "Master the TeraBox link downloader. Learn how to download TeraBox links quickly and securely. Step-by-step guide for downloading TeraBox files.",
+    type: "article",
+    url: "https://teraboxstream.com/blog/terabox-link-downloader-tutorial",
+  },
+  alternates: {
+    canonical: "https://teraboxstream.com/blog/terabox-link-downloader-tutorial",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TeraBox Link Downloader Tutorial: Download Files Instantly",
+    description: "Master the TeraBox link downloader. Learn how to download TeraBox links quickly and securely. Step-by-step guide for downloading TeraBox files.",
+  },
 };
 
 export default function TeraBoxLinkDownloaderTutorial() {

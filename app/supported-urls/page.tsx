@@ -1,3 +1,19 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Supported URLs - TeraBox Viewer",
+  description:
+    "View the list of supported TeraBox URLs and domains that work with our downloader. Learn which TeraBox links are compatible with our service.",
+  keywords:
+    "TeraBox supported URLs, TeraBox domains, TeraBox link types, TeraBox compatibility",
+  openGraph: {
+    title: "Supported URLs - TeraBox Viewer",
+    description:
+      "View the list of supported TeraBox URLs and domains that work with our downloader. Learn which TeraBox links are compatible with our service.",
+    type: "website",
+  },
+};
+
 export default function SupportedUrlsPage() {
   const supportedDomains = [
     "terabox.com",

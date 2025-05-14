@@ -6,7 +6,23 @@ export const metadata: Metadata = {
   description:
     "Learn how to stream TeraBox videos online without downloading. Watch TeraBox videos in HD quality. Step-by-step guide for streaming TeraBox content.",
   keywords:
-    "terabox video streaming, stream terabox videos, watch terabox videos online, terabox video player, terabox streaming guide, how to stream terabox videos",
+    "terabox video streaming, stream terabox videos, watch terabox videos online, terabox video player, terabox streaming guide, how to stream terabox videos, terabox link, terabox link download, terabox link downloader, terabox link open, terabox links, download terabox link, open terabox link, tera box link, terabox download link, terabox link downloader online, terabox video download, terabox video downloader, terabox video, terabox link video download, terabox link video downloader, download terabox link video, download terabox video, tera box video downloader, terabox download video, terabox online video downloader, terabox video downloader online, terabox video link, terrabox video downloader",
+  openGraph: {
+    title: "How to Stream TeraBox Videos Online: Complete Guide",
+    description:
+      "Learn how to stream TeraBox videos online without downloading. Watch TeraBox videos in HD quality. Step-by-step guide for streaming TeraBox content.",
+    type: "article",
+    url: "https://teraboxstream.com/blog/terabox-video-streaming-guide",
+  },
+  alternates: {
+    canonical: "https://teraboxstream.com/blog/terabox-video-streaming-guide",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Stream TeraBox Videos Online: Complete Guide",
+    description:
+      "Learn how to stream TeraBox videos online without downloading. Watch TeraBox videos in HD quality. Step-by-step guide for streaming TeraBox content.",
+  },
 };
 
 export default function TeraBoxVideoStreamingGuide() {

@@ -7,7 +7,23 @@ export const metadata: Metadata = {
   description:
     "Learn how to download any TeraBox link without login. Step-by-step guide for downloading TeraBox files and videos. Free TeraBox link downloader tutorial.",
   keywords:
-    "terabox link, terabox link download, terabox link downloader, terabox link open, terabox links, download terabox link, open terabox link, tera box link, terabox download link, terabox link downloader online",
+    "terabox link, terabox link download, terabox link downloader, terabox link open, terabox links, download terabox link, open terabox link, tera box link, terabox download link, terabox link downloader online, terabox video download, terabox video downloader, terabox video, terabox link video download, terabox link video downloader, download terabox link video, download terabox video, tera box video downloader, terabox download video, terabox online video downloader, terabox video downloader online, terabox video link, terrabox video downloader",
+  openGraph: {
+    title: "How to Download TeraBox Links: Complete Guide [2025]",
+    description:
+      "Learn how to download any TeraBox link without login. Step-by-step guide for downloading TeraBox files and videos. Free TeraBox link downloader tutorial.",
+    type: "article",
+    url: "https://teraboxstream.com/blog/how-to-download-terabox-links",
+  },
+  alternates: {
+    canonical: "https://teraboxstream.com/blog/how-to-download-terabox-links",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How to Download TeraBox Links: Complete Guide [2025]",
+    description:
+      "Learn how to download any TeraBox link without login. Step-by-step guide for downloading TeraBox files and videos. Free TeraBox link downloader tutorial.",
+  },
 };
 
 export default function HowToDownloadTeraBoxLinks() {

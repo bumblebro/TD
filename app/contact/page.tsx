@@ -1,3 +1,19 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us - TeraBox Viewer Support",
+  description:
+    "Get in touch with the TeraBox Viewer team. We're here to help with any questions, feedback, or support needs you may have.",
+  keywords:
+    "contact TeraBox, TeraBox support, TeraBox help, TeraBox contact, TeraBox feedback",
+  openGraph: {
+    title: "Contact Us - TeraBox Viewer Support",
+    description:
+      "Get in touch with the TeraBox Viewer team. We're here to help with any questions, feedback, or support needs you may have.",
+    type: "website",
+  },
+};
+
 export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col bg-white">

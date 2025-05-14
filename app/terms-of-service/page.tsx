@@ -2,14 +2,16 @@ import { Metadata } from "next";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Terms of Service - TeraBox Viewer",
   description:
-    "Read our Terms of Service to understand the rules and guidelines for using TeraBox Stream. Learn about your rights and responsibilities as a user.",
+    "Read our terms of service to understand the rules and guidelines for using TeraBox Viewer. Learn about your rights and responsibilities.",
+  keywords:
+    "TeraBox terms of service, TeraBox terms, TeraBox conditions, TeraBox agreement",
   openGraph: {
-    title: "Terms of Service | TeraBox Stream",
+    title: "Terms of Service - TeraBox Viewer",
     description:
-      "Read our Terms of Service to understand the rules and guidelines for using TeraBox Stream. Learn about your rights and responsibilities as a user.",
-    url: "https://teraboxstream.com/terms-of-service",
+      "Read our terms of service to understand the rules and guidelines for using TeraBox Viewer. Learn about your rights and responsibilities.",
+    type: "website",
   },
   alternates: {
     canonical: "https://teraboxstream.com/terms-of-service",

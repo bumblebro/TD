@@ -2,14 +2,16 @@ import { Metadata } from "next";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy - TeraBox Viewer",
   description:
-    "Learn about how TeraBox Stream protects your privacy and handles your data. Our privacy policy explains our data collection and usage practices.",
+    "Read our privacy policy to understand how TeraBox Viewer protects your data and maintains your privacy while using our service.",
+  keywords:
+    "TeraBox privacy policy, TeraBox data protection, TeraBox privacy, TeraBox terms",
   openGraph: {
-    title: "Privacy Policy | TeraBox Stream",
+    title: "Privacy Policy - TeraBox Viewer",
     description:
-      "Learn about how TeraBox Stream protects your privacy and handles your data. Our privacy policy explains our data collection and usage practices.",
-    url: "https://teraboxstream.com/privacy-policy",
+      "Read our privacy policy to understand how TeraBox Viewer protects your data and maintains your privacy while using our service.",
+    type: "website",
   },
   alternates: {
     canonical: "https://teraboxstream.com/privacy-policy",

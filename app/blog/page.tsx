@@ -3,11 +3,27 @@ import { Metadata } from "next";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "TeraBox Blog - How to Download TeraBox Links & Videos",
+  title: "TeraBox Blog - Guides & Tutorials for TeraBox Downloads",
   description:
-    "Learn how to download TeraBox links and videos. Step-by-step guides, tips, and tricks for using TeraBox downloader. Free tutorials for downloading TeraBox content.",
+    "Learn how to download and stream TeraBox content with our comprehensive guides and tutorials. Step-by-step instructions for TeraBox downloads and streaming.",
   keywords:
-    "terabox blog, terabox guide, terabox tutorial, how to download terabox, terabox download guide, terabox video tutorial",
+    "TeraBox blog, TeraBox guides, TeraBox tutorials, TeraBox download guide, TeraBox streaming guide, terabox link, terabox link download, terabox link downloader, terabox link open, terabox links, download terabox link, open terabox link, tera box link, terabox download link, terabox link downloader online, terabox video download, terabox video downloader, terabox video, terabox link video download, terabox link video downloader, download terabox link video, download terabox video, tera box video downloader, terabox download video, terabox online video downloader, terabox video downloader online, terabox video link, terrabox video downloader",
+  openGraph: {
+    title: "TeraBox Blog - Guides & Tutorials for TeraBox Downloads",
+    description:
+      "Learn how to download and stream TeraBox content with our comprehensive guides and tutorials. Step-by-step instructions for TeraBox downloads and streaming.",
+    type: "website",
+    url: "https://teraboxstream.com/blog",
+  },
+  alternates: {
+    canonical: "https://teraboxstream.com/blog",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TeraBox Blog - Guides & Tutorials for TeraBox Downloads",
+    description:
+      "Learn how to download and stream TeraBox content with our comprehensive guides and tutorials. Step-by-step instructions for TeraBox downloads and streaming.",
+  },
 };
 
 const blogPosts = [
