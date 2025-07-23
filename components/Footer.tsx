@@ -34,6 +34,11 @@ export default function Footer() {
                   FAQ
                 </Link>
               </li>
+              <li>
+                <Link href="/dmca" className="text-gray-300 hover:text-white">
+                  DMCA
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -95,6 +100,12 @@ export default function Footer() {
                   className="text-gray-400 hover:text-white"
                 >
                   Terms of Service
+                </Link>
+                <Link
+                  href="/dmca"
+                  className="text-gray-400 hover:text-white"
+                >
+                  DMCA
                 </Link>
               </div>
             </div>

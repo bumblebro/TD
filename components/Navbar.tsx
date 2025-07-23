@@ -71,6 +71,24 @@ export default function Navbar() {
             >
               Supported URLs
             </Link>
+            <Link
+              href="/dmca"
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
+            >
+              DMCA
+            </Link>
+            <Link
+              href="/privacy-policy"
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-of-service"
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm sm:text-base"
+            >
+              Terms of Service
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -157,6 +175,27 @@ export default function Navbar() {
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
             >
               Supported URLs
+            </Link>
+            <Link
+              href="/dmca"
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            >
+              DMCA
+            </Link>
+            <Link
+              href="/privacy-policy"
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-of-service"
+              onClick={() => setIsOpen(false)}
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Terms of Service
             </Link>
           </div>
         </div>

@@ -1,3 +1,5 @@
+
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -10,6 +12,10 @@ import Footer from "@/components/Footer";
 import FloatingButton from "@/components/FloatingButton";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { usePathname } from "next/navigation";
+import { generateBreadcrumbSchema } from "@/lib/generateBreadcrumbs";
+import BreadcrumbStructuredData from "@/components/BreadcrumbStructuredData";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -99,6 +105,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  // const pathname = usePathname();
+  // const breadcrumbJson = generateBreadcrumbSchema(pathname);
+
   return (
     <html lang="en" suppressHydrationWarning className="h-full">
       <head>
@@ -229,7 +239,7 @@ export default function RootLayout({
           }}
         />
 
-        <Script
+        {/* <Script
           id="breadcrumb-structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -258,7 +268,19 @@ export default function RootLayout({
               ],
             }),
           }}
-        />
+        /> */}
+
+{/* <Script
+        id="breadcrumb-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbJson),
+        }}
+      /> */}
+
+<BreadcrumbStructuredData />
+
+
       </head>
       <body
         className={

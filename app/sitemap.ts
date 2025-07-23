@@ -35,6 +35,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
     },
     {
+      url: `${baseUrl}/blog/cloud-storage-guide`,
+      lastModified: currentDate,
+    },
+    {
+      url: `${baseUrl}/blog/terabox-review`,
+      lastModified: currentDate,
+    },
+    {
+      url: `${baseUrl}/blog/block-terabox-ads`,
+      lastModified: currentDate,
+    },
+    {
       url: `${baseUrl}/faq`,
       lastModified: currentDate,
     },

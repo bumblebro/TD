@@ -63,6 +63,33 @@ const blogPosts = [
     category: "Guides",
     readTime: "4 min read",
   },
+  {
+    slug: "cloud-storage-guide",
+    title: "2025 » 5 Best Cloud Storage [To the point Guide]",
+    excerpt:
+      "Discover the best cloud storage services of 2024, including TeraBox, pCloud, MEGA, CloudMounter, and Proton Drive. Find the perfect solution...",
+    date: "2024-06-01",
+    category: "Review",
+    readTime: "11 min read",
+  },
+  {
+    slug: "terabox-review",
+    title: "TeraBox Review: Safe or Not? Free or Not?",
+    excerpt:
+      "Exploring TeraBox: A Comprehensive Review of the Best Free Cloud Storage Solution.",
+    date: "2024-06-10",
+    category: "Review",
+    readTime: "6 min read",
+  },
+  {
+    slug: "block-terabox-ads",
+    title: "How to Block Ads on Terabox | Terabox Par Ads Kaise Band Karein 2024",
+    excerpt:
+      "Find out how to watch and download TeraBox content without any ads or app installation. 💯 Block annoying TeraBox ads.",
+    date: "2024-06-12",
+    category: "How-to",
+    readTime: "3 min read",
+  },
 ];
 
 export default function BlogPage() {
@@ -129,6 +156,42 @@ export default function BlogPage() {
             <p className="text-gray-600">
               Discover how to stream videos from TeraBox without downloading
               them.
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/cloud-storage-guide"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              2025 » 5 Best Cloud Storage [To the point Guide]
+            </h2>
+            <p className="text-gray-600">
+              Discover the best cloud storage services of 2024, including TeraBox, pCloud, MEGA, CloudMounter, and Proton Drive. Find the perfect solution...
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/terabox-review"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              TeraBox Review: Safe or Not? Free or Not?
+            </h2>
+            <p className="text-gray-600">
+              Exploring TeraBox: A Comprehensive Review of the Best Free Cloud Storage Solution.
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/block-terabox-ads"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              How to Block Ads on Terabox | Terabox Par Ads Kaise Band Karein 2024
+            </h2>
+            <p className="text-gray-600">
+              Find out how to watch and download TeraBox content without any ads or app installation. 💯 Block annoying TeraBox ads.
             </p>
           </Link>
         </div>
