@@ -7,11 +7,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
           {/* About Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">About TeraBox</h3>
+            <h3 className="text-lg font-semibold">About TeraBoxStream</h3>
             <p className="text-gray-300 text-sm">
-              TeraBox is a cloud storage service that offers 1TB of free storage
-              space. Our tool helps you stream and download videos from TeraBox
-              links easily and securely.
+              TeraBoxStream is a free online tool that helps you stream and
+              download videos from TeraBox links easily and securely. Enjoy
+              fast, no-login access to your TeraBox files with a simple,
+              user-friendly interface.
             </p>
           </div>
 
@@ -101,10 +102,7 @@ export default function Footer() {
                 >
                   Terms of Service
                 </Link>
-                <Link
-                  href="/dmca"
-                  className="text-gray-400 hover:text-white"
-                >
+                <Link href="/dmca" className="text-gray-400 hover:text-white">
                   DMCA
                 </Link>
               </div>
