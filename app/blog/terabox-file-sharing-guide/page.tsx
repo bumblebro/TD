@@ -68,7 +68,10 @@ export default function TeraBoxFileSharingGuide() {
             <ol className="text-gray-700 list-decimal list-inside mb-4">
               <li>Open TeraBox (app or web) and log in</li>
               <li>Find the file or folder you want to share</li>
-              <li>Click the &quot;Share&quot; button (usually an icon with two links)</li>
+              <li>
+                Click the &quot;Share&quot; button (usually an icon with two
+                links)
+              </li>
               <li>Choose to share via link or email</li>
               <li>
                 Set a password or expiration date for extra privacy (optional)
