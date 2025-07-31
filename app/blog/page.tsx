@@ -83,12 +83,67 @@ const blogPosts = [
   },
   {
     slug: "block-terabox-ads",
-    title: "How to Block Ads on Terabox | Terabox Par Ads Kaise Band Karein 2024",
+    title:
+      "How to Block Ads on Terabox | Terabox Par Ads Kaise Band Karein 2024",
     excerpt:
       "Find out how to watch and download TeraBox content without any ads or app installation. 💯 Block annoying TeraBox ads.",
     date: "2024-06-12",
     category: "How-to",
     readTime: "3 min read",
+  },
+  {
+    slug: "terabox-vs-google-drive",
+    title: "TeraBox vs Google Drive: Which is Better in 2025?",
+    excerpt:
+      "A detailed comparison of TeraBox and Google Drive for storage, privacy, and value in 2025.",
+    date: "2025-07-01",
+    category: "Comparison",
+    readTime: "7 min read",
+  },
+  {
+    slug: "terabox-privacy-guide",
+    title: "TeraBox Privacy Guide: How Safe is Your Data?",
+    excerpt:
+      "Understand TeraBox privacy settings, data safety, and how to protect your files in 2025.",
+    date: "2025-07-02",
+    category: "Guide",
+    readTime: "6 min read",
+  },
+  {
+    slug: "terabox-mobile-vs-desktop",
+    title: "TeraBox Mobile vs Desktop: Which Should You Use?",
+    excerpt:
+      "Pros and cons of using TeraBox on mobile vs desktop. Find out which is best for your needs.",
+    date: "2025-07-03",
+    category: "Comparison",
+    readTime: "5 min read",
+  },
+  {
+    slug: "terabox-file-sharing-guide",
+    title: "TeraBox File Sharing Guide: How to Share Files & Folders in 2025",
+    excerpt:
+      "Step-by-step guide to sharing files and folders on TeraBox, with privacy tips and troubleshooting.",
+    date: "2025-07-04",
+    category: "Guide",
+    readTime: "6 min read",
+  },
+  {
+    slug: "terabox-premium-worth-it",
+    title: "TeraBox Premium Review: Is It Worth It in 2025?",
+    excerpt:
+      "A full review of TeraBox Premium features, pricing, and whether it’s worth upgrading in 2025.",
+    date: "2025-07-05",
+    category: "Review",
+    readTime: "7 min read",
+  },
+  {
+    slug: "terabox-faq-2025",
+    title: "TeraBox FAQ 2025: Most Asked Questions Answered",
+    excerpt:
+      "Get answers to the most common TeraBox questions for 2025. Updated and easy to understand.",
+    date: "2025-07-06",
+    category: "FAQ",
+    readTime: "8 min read",
   },
 ];
 
@@ -167,7 +222,9 @@ export default function BlogPage() {
               2025 » 5 Best Cloud Storage [To the point Guide]
             </h2>
             <p className="text-gray-600">
-              Discover the best cloud storage services of 2024, including TeraBox, pCloud, MEGA, CloudMounter, and Proton Drive. Find the perfect solution...
+              Discover the best cloud storage services of 2024, including
+              TeraBox, pCloud, MEGA, CloudMounter, and Proton Drive. Find the
+              perfect solution...
             </p>
           </Link>
 
@@ -179,7 +236,8 @@ export default function BlogPage() {
               TeraBox Review: Safe or Not? Free or Not?
             </h2>
             <p className="text-gray-600">
-              Exploring TeraBox: A Comprehensive Review of the Best Free Cloud Storage Solution.
+              Exploring TeraBox: A Comprehensive Review of the Best Free Cloud
+              Storage Solution.
             </p>
           </Link>
 
@@ -188,10 +246,90 @@ export default function BlogPage() {
             className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
           >
             <h2 className="mb-2 text-xl font-semibold text-gray-800">
-              How to Block Ads on Terabox | Terabox Par Ads Kaise Band Karein 2024
+              How to Block Ads on Terabox | Terabox Par Ads Kaise Band Karein
+              2024
             </h2>
             <p className="text-gray-600">
-              Find out how to watch and download TeraBox content without any ads or app installation. 💯 Block annoying TeraBox ads.
+              Find out how to watch and download TeraBox content without any ads
+              or app installation. 💯 Block annoying TeraBox ads.
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/terabox-vs-google-drive"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              TeraBox vs Google Drive: Which is Better in 2025?
+            </h2>
+            <p className="text-gray-600">
+              A detailed comparison of TeraBox and Google Drive for storage,
+              privacy, and value in 2025.
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/terabox-privacy-guide"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              TeraBox Privacy Guide: How Safe is Your Data?
+            </h2>
+            <p className="text-gray-600">
+              Understand TeraBox privacy settings, data safety, and how to
+              protect your files in 2025.
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/terabox-mobile-vs-desktop"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              TeraBox Mobile vs Desktop: Which Should You Use?
+            </h2>
+            <p className="text-gray-600">
+              Pros and cons of using TeraBox on mobile vs desktop. Find out
+              which is best for your needs.
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/terabox-file-sharing-guide"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              TeraBox File Sharing Guide: How to Share Files & Folders in 2025
+            </h2>
+            <p className="text-gray-600">
+              Step-by-step guide to sharing files and folders on TeraBox, with
+              privacy tips and troubleshooting.
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/terabox-premium-worth-it"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              TeraBox Premium Review: Is It Worth It in 2025?
+            </h2>
+            <p className="text-gray-600">
+              A full review of TeraBox Premium features, pricing, and whether
+              it’s worth upgrading in 2025.
+            </p>
+          </Link>
+
+          <Link
+            href="/blog/terabox-faq-2025"
+            className="p-6 transition-colors rounded-lg bg-gray-50 hover:bg-gray-100"
+          >
+            <h2 className="mb-2 text-xl font-semibold text-gray-800">
+              TeraBox FAQ 2025: Most Asked Questions Answered
+            </h2>
+            <p className="text-gray-600">
+              Get answers to the most common TeraBox questions for 2025. Updated
+              and easy to understand.
             </p>
           </Link>
         </div>

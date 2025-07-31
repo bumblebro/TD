@@ -45,6 +45,7 @@ export default function BlockTeraBoxAds() {
           <h1 className="mb-6 text-4xl font-bold md:text-5xl">
             How to Block Ads on Terabox
           </h1>
+          {/* Removed hero image for AdSense compliance and to avoid images */}
           <div className="flex items-center gap-4">
             <span className="px-3 py-1 text-sm text-white bg-blue-500 rounded-full">
               How-to

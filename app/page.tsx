@@ -260,6 +260,181 @@ export default function Home() {
               </div>
             </section>
 
+            {/* Blog Section */}
+            <section className="py-16 bg-white">
+              <div className="max-w-6xl px-4 mx-auto">
+                <div className="mb-12 text-center">
+                  <h2 className="mb-4 text-3xl font-bold text-gray-900">
+                    Latest Blog Posts
+                  </h2>
+                  <p className="max-w-2xl mx-auto text-gray-600">
+                    Discover helpful guides and tutorials about downloading and
+                    streaming TeraBox content.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                  {[
+                    {
+                      title: "How to Download TeraBox Links",
+                      excerpt:
+                        "Complete guide for downloading TeraBox links without login.",
+                      link: "/blog/how-to-download-terabox-links",
+                      category: "Guides",
+                      readTime: "5 min read",
+                    },
+                    {
+                      title: "TeraBox Video Downloader Guide",
+                      excerpt:
+                        "Learn how to download videos from TeraBox without login.",
+                      link: "/blog/terabox-video-downloader-guide",
+                      category: "Tutorial",
+                      readTime: "5 min read",
+                    },
+                    {
+                      title: "How to Stream TeraBox Videos Online",
+                      excerpt:
+                        "Learn how to stream TeraBox videos without downloading.",
+                      link: "/blog/terabox-video-streaming-guide",
+                      category: "Guides",
+                      readTime: "4 min read",
+                    },
+                    {
+                      title: "2025 » 5 Best Cloud Storage [To the point Guide]",
+                      excerpt:
+                        "Discover the best cloud storage services of 2024, including TeraBox, pCloud, MEGA, CloudMounter, and Proton Drive.",
+                      link: "/blog/cloud-storage-guide",
+                      category: "Review",
+                      readTime: "11 min read",
+                    },
+                    {
+                      title: "How to Block Ads on Terabox",
+                      excerpt:
+                        "Find out how to watch and download TeraBox content without any ads or app installation. Block annoying TeraBox ads and enjoy a seamless experience.",
+                      link: "/blog/block-terabox-ads",
+                      category: "How-to",
+                      readTime: "3 min read",
+                    },
+                    {
+                      title:
+                        "TeraBox Link Downloader Tutorial: Download Files Instantly",
+                      excerpt:
+                        "Master the TeraBox link downloader with our step-by-step guide.",
+                      link: "/blog/terabox-link-downloader-tutorial",
+                      category: "How-to",
+                      readTime: "3 min read",
+                    },
+                    {
+                      title: "TeraBox Review: Safe or Not? Free or Not?",
+                      excerpt:
+                        "A comprehensive review of TeraBox cloud storage: Is it safe? Is it really free? Features, security, pricing, and more.",
+                      link: "/blog/terabox-review",
+                      category: "Review",
+                      readTime: "6 min read",
+                    },
+                    {
+                      title:
+                        "TeraBox vs Google Drive: Which Cloud Storage is Better in 2025?",
+                      excerpt:
+                        "A detailed comparison of TeraBox and Google Drive for 2025. Storage, speed, privacy, pricing, and features compared. Find out which cloud storage is best for you.",
+                      link: "/blog/terabox-vs-google-drive",
+                      category: "Comparison",
+                      readTime: "7 min read",
+                    },
+                    {
+                      title:
+                        "TeraBox Privacy Guide: How Safe Is Your Data in 2025?",
+                      excerpt:
+                        "A human-written guide to TeraBox privacy and security in 2025. Learn how your files are protected, what risks exist, and how to keep your data safe on TeraBox.",
+                      link: "/blog/terabox-privacy-guide",
+                      category: "Guide",
+                      readTime: "6 min read",
+                    },
+                    {
+                      title:
+                        "TeraBox Mobile App vs Desktop: Which Should You Use in 2025?",
+                      excerpt:
+                        "A human-written comparison of TeraBox mobile app and desktop/web experience in 2025. Features, speed, usability, and best use cases for each.",
+                      link: "/blog/terabox-mobile-vs-desktop",
+                      category: "Comparison",
+                      readTime: "5 min read",
+                    },
+                    {
+                      title:
+                        "TeraBox File Sharing Guide: How to Share Files & Folders in 2025",
+                      excerpt:
+                        "A human-written guide to sharing files and folders on TeraBox in 2025. Step-by-step instructions, privacy tips, and troubleshooting for TeraBox sharing.",
+                      link: "/blog/terabox-file-sharing-guide",
+                      category: "Guide",
+                      readTime: "5 min read",
+                    },
+                    {
+                      title:
+                        "Is TeraBox Premium Worth It? Honest Review for 2025",
+                      excerpt:
+                        "A human-written review of TeraBox Premium in 2025. Features, pricing, pros, cons, and whether you should upgrade from the free plan.",
+                      link: "/blog/terabox-premium-worth-it",
+                      category: "Review",
+                      readTime: "4 min read",
+                    },
+                    {
+                      title:
+                        "TeraBox FAQ 2025: Answers to the Most Common Questions",
+                      excerpt:
+                        "A human-written FAQ for TeraBox in 2025. Get answers to the most common questions about TeraBox storage, privacy, downloads, and more.",
+                      link: "/blog/terabox-faq-2025",
+                      category: "FAQ",
+                      readTime: "5 min read",
+                    },
+                  ].map((post, index) => (
+                    <Link
+                      key={index}
+                      href={post.link}
+                      className="block transition-shadow bg-white rounded-lg shadow-lg group hover:shadow-xl"
+                    >
+                      <div className="p-6">
+                        <div className="flex items-center gap-4 mb-4">
+                          <span className="px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
+                            {post.category}
+                          </span>
+                          <span className="text-sm text-gray-500">
+                            {post.readTime}
+                          </span>
+                        </div>
+                        <h3 className="mb-3 text-xl font-semibold text-gray-900 transition-colors group-hover:text-blue-600">
+                          {post.title}
+                        </h3>
+                        <p className="mb-4 text-gray-600">{post.excerpt}</p>
+                        <div className="flex items-center font-medium text-blue-600">
+                          Read More
+                          <svg
+                            className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <div className="mt-12 text-center">
+                  <Link
+                    href="/blog"
+                    className="inline-block px-8 py-3 font-semibold text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
+                  >
+                    View All Blog Posts
+                  </Link>
+                </div>
+              </div>
+            </section>
+
             {/* How to Use Section */}
             <div className="mt-12">
               <h2 className="mb-8 text-2xl font-bold text-center text-gray-900">
@@ -710,94 +885,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/* Blog Section */}
-            <section className="py-16 bg-white">
-              <div className="max-w-6xl px-4 mx-auto">
-                <div className="mb-12 text-center">
-                  <h2 className="mb-4 text-3xl font-bold text-gray-900">
-                    Latest Blog Posts
-                  </h2>
-                  <p className="max-w-2xl mx-auto text-gray-600">
-                    Discover helpful guides and tutorials about downloading and
-                    streaming TeraBox content.
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                  {[
-                    {
-                      title: "How to Download TeraBox Links",
-                      excerpt:
-                        "Complete guide for downloading TeraBox links without login.",
-                      link: "/blog/how-to-download-terabox-links",
-                      category: "Guides",
-                      readTime: "4 min read",
-                    },
-                    {
-                      title: "TeraBox Video Downloader Guide",
-                      excerpt:
-                        "Learn how to download videos from TeraBox without login.",
-                      link: "/blog/terabox-video-downloader-guide",
-                      category: "Tutorial",
-                      readTime: "5 min read",
-                    },
-                    {
-                      title: "How to Stream TeraBox Videos Online",
-                      excerpt:
-                        "Learn how to stream TeraBox videos without downloading.",
-                      link: "/blog/terabox-video-streaming-guide",
-                      category: "Guides",
-                      readTime: "4 min read",
-                    },
-                  ].map((post, index) => (
-                    <Link
-                      key={index}
-                      href={post.link}
-                      className="block transition-shadow bg-white rounded-lg shadow-lg group hover:shadow-xl"
-                    >
-                      <div className="p-6">
-                        <div className="flex items-center gap-4 mb-4">
-                          <span className="px-3 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
-                            {post.category}
-                          </span>
-                          <span className="text-sm text-gray-500">
-                            {post.readTime}
-                          </span>
-                        </div>
-                        <h3 className="mb-3 text-xl font-semibold text-gray-900 transition-colors group-hover:text-blue-600">
-                          {post.title}
-                        </h3>
-                        <p className="mb-4 text-gray-600">{post.excerpt}</p>
-                        <div className="flex items-center font-medium text-blue-600">
-                          Read More
-                          <svg
-                            className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-                <div className="mt-12 text-center">
-                  <Link
-                    href="/blog"
-                    className="inline-block px-8 py-3 font-semibold text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
-                  >
-                    View All Blog Posts
-                  </Link>
-                </div>
-              </div>
-            </section>
 
             <div className="mt-12 text-center">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">
