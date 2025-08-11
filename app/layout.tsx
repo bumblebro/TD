@@ -1,5 +1,3 @@
-
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -15,7 +13,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { usePathname } from "next/navigation";
 import { generateBreadcrumbSchema } from "@/lib/generateBreadcrumbs";
 import BreadcrumbStructuredData from "@/components/BreadcrumbStructuredData";
-
+import AdsenseScript from "@/components/Ads/AdsenseScript";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -105,7 +103,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   // const pathname = usePathname();
   // const breadcrumbJson = generateBreadcrumbSchema(pathname);
 
@@ -119,6 +116,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="TeraBox Stream" />
+        <AdsenseScript />
         <Script
           id="structured-data"
           type="application/ld+json"
@@ -270,7 +268,7 @@ export default function RootLayout({
           }}
         /> */}
 
-{/* <Script
+        {/* <Script
         id="breadcrumb-jsonld"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -278,9 +276,7 @@ export default function RootLayout({
         }}
       /> */}
 
-<BreadcrumbStructuredData />
-
-
+        <BreadcrumbStructuredData />
       </head>
       <body
         className={
