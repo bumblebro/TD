@@ -258,6 +258,54 @@ export default function Home() {
                   </form> */}
 
                   <form
+                    action="/loader"
+                    method="GET"
+                    className="space-y-4 sm:space-y-6"
+                  >
+                    <div>
+                      <label
+                        htmlFor="url"
+                        className="block mb-2 text-sm font-medium text-gray-700"
+                      >
+                        Enter Terabox URL
+                      </label>
+                      <div className="flex flex-col gap-2 sm:flex-row">
+                        <input
+                          type="url"
+                          id="url"
+                          name="token" // <-- IMPORTANT: name is "token"
+                          value={url}
+                          onChange={(e) => setUrl(e.target.value)}
+                          placeholder="https://1024terabox.com/s/..."
+                          required
+                          className="flex-1 px-3 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border border-gray-200 rounded-lg sm:px-4 sm:py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-base"
+                          disabled={loading}
+                        />
+
+                        <button
+                          type="button"
+                          onClick={handlePaste}
+                          className="flex items-center justify-center gap-2 px-3 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border border-gray-200 rounded-lg sm:px-4 sm:py-3 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:text-base"
+                          disabled={loading}
+                        >
+                          {/* your paste SVG */}
+                          Paste
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* keep your error/loading UI */}
+
+                    <button
+                      type="submit" // <-- real navigation now
+                      disabled={loading}
+                      className="w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-500 rounded-lg sm:py-3 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed sm:text-base"
+                    >
+                      {loading ? "Processing..." : "Watch Terabox Video"}
+                    </button>
+                  </form>
+
+                  {/* <form
                     action="/watch"
                     method="GET"
                     className="space-y-4 sm:space-y-6"
@@ -327,7 +375,7 @@ export default function Home() {
                     >
                       Watch Terabox Video
                     </button>
-                  </form>
+                  </form> */}
                 </div>
               </div>
             </section>
