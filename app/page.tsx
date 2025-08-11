@@ -124,7 +124,8 @@ export default function Home() {
     //   return;
     // }
 
-    router.push(`/watch?token=${encodeURIComponent(url)}`);
+    // router.push(`/watch?token=${encodeURIComponent(url)}`);
+    window.location.assign(`/watch?token=${encodeURIComponent(url)}`);
   }
 
   return (
