@@ -14,9 +14,8 @@ export default function LoaderPage({
   useEffect(() => {
     if (!token) return;
     const t = setTimeout(() => {
-      // second full navigation to /watch with the token
       window.location.href = `/watch?token=${encodeURIComponent(token)}`;
-    }, 2500); // ~2–3s gives AdSense a chance to hook a vignette
+    }, 2500); // ~2–3s gives AdSense time to hook vignettes
     return () => clearTimeout(t);
   }, [token]);
 
@@ -65,4 +64,3 @@ export default function LoaderPage({
     </div>
   );
 }
-// export const dynamic = "force-dynamic"; // Force dynamic rendering for this page
