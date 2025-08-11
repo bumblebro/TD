@@ -292,7 +292,6 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
           <FloatingButton />
-          <Toaster />
           <Analytics />
           <SpeedInsights />
         </ThemeProvider>
