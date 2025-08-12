@@ -229,12 +229,42 @@ export default function WatchPage() {
             {isLoading && (
               <div className="p-4 mt-6 sm:mt-8 bg-gray-50 rounded-xl sm:p-8 animate-pulse">
                 <div className="flex flex-col items-center">
+                  <div className="flex items-center gap-2 mb-4">
+                    <svg
+                      className="w-5 h-5 animate-spin text-blue-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                        fill="none"
+                      />
+                      <path
+                        d="M4 12a8 8 0 018-8"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                    <span className="text-base text-blue-700">
+                      Loading video details, please wait...
+                    </span>
+                  </div>
                   <div className="w-full mb-4 bg-gray-200 rounded-lg aspect-video sm:mb-6" />
                   <div className="w-3/4 h-6 mb-2 bg-gray-200 rounded" />
                   <div className="w-1/4 h-4 mb-4 bg-gray-200 rounded sm:mb-6" />
                   <div className="flex gap-4">
                     <div className="w-32 h-10 bg-gray-200 rounded" />
                     <div className="w-32 h-10 bg-gray-200 rounded" />
+                  </div>
+                  <div className="mt-4 text-gray-500 text-sm">
+                    This may take a few seconds depending on file size and
+                    network speed.
                   </div>
                 </div>
               </div>
