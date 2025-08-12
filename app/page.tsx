@@ -125,8 +125,16 @@ export default function Home() {
     // }
 
     // router.push(`/watch?token=${encodeURIComponent(url)}`);
+    // Instead of JS redirect, trigger navigation by creating and clicking a hidden <a> element
     setTimeout(() => {
-      window.location.assign(`/watch?token=${encodeURIComponent(url)}`);
+      const a = document.createElement("a");
+      a.href = `/watch?token=${encodeURIComponent(url)}`;
+      a.style.display = "none";
+      a.rel = "noopener noreferrer";
+      a.target = "_self";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     }, 400); // 400ms delay for AdSense vignette
   }
 
