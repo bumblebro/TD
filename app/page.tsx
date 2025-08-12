@@ -111,7 +111,7 @@ export default function Home() {
     e.preventDefault();
     setError("");
     setLoading(true);
-    setLoadingMessage("Processing your request...");
+    setLoadingMessage("Loading video, please wait...");
 
     if (!url) {
       setError("Please enter a Terabox URL");
@@ -124,18 +124,10 @@ export default function Home() {
     //   return;
     // }
 
-    // router.push(`/watch?token=${encodeURIComponent(url)}`);
-    // Instead of JS redirect, trigger navigation by creating and clicking a hidden <a> element
+    // Show loading/interstitial for 1 second before redirect
     setTimeout(() => {
-      const a = document.createElement("a");
-      a.href = `/watch?token=${encodeURIComponent(url)}`;
-      a.style.display = "none";
-      a.rel = "noopener noreferrer";
-      a.target = "_self";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    }, 400); // 400ms delay for AdSense vignette
+      window.location.assign(`/watch?token=${encodeURIComponent(url)}`);
+    }, 1000);
   }
 
   return (
@@ -254,7 +246,28 @@ export default function Home() {
                       </div>
                     )}
                     {loading && (
-                      <div className="p-3 text-sm text-blue-600 border border-blue-100 rounded-lg bg-blue-50">
+                      <div className="p-3 text-base text-blue-700 border border-blue-200 rounded-lg bg-blue-50 flex items-center gap-2 justify-center animate-pulse">
+                        <svg
+                          className="w-5 h-5 animate-spin text-blue-500"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                            fill="none"
+                          />
+                          <path
+                            d="M4 12a8 8 0 018-8"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                            strokeLinecap="round"
+                          />
+                        </svg>
                         {loadingMessage}
                       </div>
                     )}
