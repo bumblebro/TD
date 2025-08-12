@@ -107,27 +107,13 @@ export default function Home() {
     }
   };
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
-    setLoadingMessage("Loading video, please wait...");
-
+  function handleSubmit(e: React.FormEvent) {
     if (!url) {
+      e.preventDefault();
       setError("Please enter a Terabox URL");
-      setLoading(false);
       return;
     }
-    // if (!checkUrlPatterns(url)) {
-    //   setError("Invalid Terabox URL");
-    //   setLoading(false);
-    //   return;
-    // }
-
-    // Show loading/interstitial for 1 second before redirect
-    setTimeout(() => {
-      window.location.assign(`/watch?token=${encodeURIComponent(url)}`);
-    }, 1000);
+    // No JS navigation, let the <a> handle it
   }
 
   return (
@@ -271,13 +257,23 @@ export default function Home() {
                         {loadingMessage}
                       </div>
                     )}
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className="w-full px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-500 rounded-lg sm:py-3 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed sm:text-base"
+                    <a
+                      href={
+                        url
+                          ? `/watch?token=${encodeURIComponent(url)}`
+                          : undefined
+                      }
+                      onClick={handleSubmit}
+                      className={`w-full block text-center px-4 py-2 text-sm font-medium text-white transition-colors duration-200 bg-blue-500 rounded-lg sm:py-3 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 sm:text-base${
+                        !url
+                          ? " opacity-50 cursor-not-allowed pointer-events-none"
+                          : ""
+                      }`}
+                      aria-disabled={!url}
+                      tabIndex={!url ? -1 : 0}
                     >
-                      {loading ? "Processing..." : "Watch Terabox Video"}
-                    </button>
+                      Watch Terabox Video
+                    </a>
                   </form>
                 </div>
               </div>
