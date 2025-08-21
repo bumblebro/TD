@@ -16,14 +16,26 @@ export default function Navbar() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    // Force hard refresh if user navigates back to home page
+    const handlePopState = () => {
+      if (window.location.pathname === "/") {
+        window.location.reload();
+      }
+    };
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("popstate", handlePopState);
+    };
   }, []);
 
   const handleHomeClick = () => {
     // Dispatch custom event to reset page state
     window.dispatchEvent(new Event("resetPage"));
-    router.push("/");
-    router.refresh();
+    // Perform a full page reload for AdSense vignette and impression
+    window.location.href = "/";
   };
 
   return (
