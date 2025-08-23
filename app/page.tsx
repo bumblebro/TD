@@ -183,8 +183,8 @@ export default function Home() {
             <section id="link-input-section" className="py-12 bg-gray-50">
               <div className="max-w-3xl mx-auto ">
                 <div className="p-4 bg-gray-50 rounded-xl sm:p-8">
-                  <form
-                    onSubmit={handleSubmit}
+                  <div
+                    // onSubmit={handleSubmit}
                     className="space-y-4 sm:space-y-6"
                   >
                     <div>
@@ -276,7 +276,7 @@ export default function Home() {
                     >
                       Watch Terabox Video
                     </a>
-                  </form>
+                  </div>
                 </div>
               </div>
             </section>
