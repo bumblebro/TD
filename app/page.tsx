@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
+import { DisplayAdUnit } from "@/components/Ads/ad-unit";
 
 function isValidUrl(url: string | URL) {
   try {
@@ -176,6 +177,7 @@ export default function Home() {
                 1024terabox, freeterabox, nephobox, and other Terabox domains.
               </p>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* Link Input Section */}
             <section id="link-input-section" className="py-12 bg-gray-50">
@@ -278,6 +280,7 @@ export default function Home() {
                 </div>
               </div>
             </section>
+            <DisplayAdUnit format="auto" />
 
             {/* Blog Section */}
             <section className="py-16 bg-white">
@@ -453,6 +456,7 @@ export default function Home() {
                 </div>
               </div>
             </section>
+            <DisplayAdUnit format="auto" />
 
             {/* How to Use Section */}
             <div className="mt-12">
@@ -519,6 +523,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* Features Section */}
             <div className="mt-12">
@@ -598,6 +603,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* Benefits Section */}
             <div className="mt-12">
@@ -643,6 +649,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* Usage Statistics */}
             <div className="mt-12">
@@ -674,6 +681,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* About Terabox Section */}
             <div className="mt-12">
@@ -727,6 +735,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* About TeraDownloader Section */}
             <div className="mt-6">
@@ -752,6 +761,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* FAQ Section */}
             <div className="mt-12">
@@ -919,6 +929,7 @@ export default function Home() {
               >
                 Start Downloading
               </a>
+              <DisplayAdUnit format="auto" />
 
               {/* Share Website Buttons */}
               <div className="mt-8">

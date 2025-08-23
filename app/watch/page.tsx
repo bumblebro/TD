@@ -7,6 +7,7 @@ import useSWR from "swr";
 import VideoPlayer, { VideoPlayerRef } from "@/components/VideoPlayer";
 import { useRouter, useSearchParams } from "next/navigation";
 import Head from "next/head";
+import { DisplayAdUnit } from "@/components/Ads/ad-unit";
 
 interface ResponseData {
   file_name: string;
@@ -211,6 +212,7 @@ export default function WatchPage() {
                 Stream and download videos from TeraBox without login
               </p>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* Loading and Error States */}
             {loading && (
@@ -325,6 +327,7 @@ export default function WatchPage() {
                 </div>
               </div>
             )}
+            <DisplayAdUnit format="auto" />
 
             {/* Features Section */}
             <div className="mt-12">
@@ -404,6 +407,7 @@ export default function WatchPage() {
                 </div>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* Benefits Section */}
             <div className="mt-12">
@@ -449,6 +453,7 @@ export default function WatchPage() {
                 </div>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* Usage Statistics */}
             <div className="mt-12">
@@ -480,6 +485,7 @@ export default function WatchPage() {
                 </div>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* FAQ Section */}
             <div className="mt-12">
@@ -537,6 +543,7 @@ export default function WatchPage() {
                 </div>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* About Terabox Section */}
             <div className="mt-12">
@@ -590,6 +597,7 @@ export default function WatchPage() {
                 </div>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* Blog Section */}
             <section className="py-16 bg-white">
@@ -676,6 +684,7 @@ export default function WatchPage() {
                 </div>
               </div>
             </section>
+            <DisplayAdUnit format="auto" />
 
             {/* Share Section */}
             <div className="mt-12 text-center">
@@ -769,6 +778,7 @@ export default function WatchPage() {
                 </button>
               </div>
             </div>
+            <DisplayAdUnit format="auto" />
 
             {/* Call to Action */}
             <div className="mt-12 text-center">
